@@ -22,7 +22,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
@@ -134,8 +134,8 @@
       font-family: var(--font-sans);
       color: var(--tpt-charcoal);
       background: var(--tpt-cream);
-      line-height: 1.6;
-      font-size: 17px;
+      line-height: 1.65;
+      font-size: 19px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -144,8 +144,19 @@
     a:hover { color: var(--tpt-amber); }
 
     h1, h2, h3 { font-family: var(--font-serif); color: var(--tpt-green); font-weight: 600; line-height: 1.2; }
-    h1 { font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: -0.01em; }
-    h2 { font-size: clamp(1.6rem, 3.5vw, 2.3rem); margin-bottom: 1rem; }
+    h1 {
+      font-size: clamp(2.25rem, 6vw, 5.5rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
     h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
 
     p { margin-bottom: 1rem; }
@@ -183,13 +194,16 @@
       align-items: center;
       justify-content: space-between;
     }
+    nav a {
+      transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
     .brand-mark {
       display: flex;
       align-items: center;
     }
     .brand-logo {
       display: block;
-      height: 68px;
+      height: 80px;
       width: auto;
     }
     .nav-tag {
@@ -206,7 +220,9 @@
     }
     .hero h1 { margin-bottom: 1.5rem; max-width: 16ch; }
     .hero .lead {
-      font-size: 1.2rem;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.45;
       color: var(--tpt-warm-gray);
       max-width: 36ch;
       margin-bottom: 2rem;
@@ -231,19 +247,50 @@
       outline: none;
     }
     .waitlist input[type="email"]:focus { border-color: var(--tpt-green); }
-    .waitlist button {
-      padding: 0.95rem 1.5rem;
-      font-family: var(--font-sans);
-      font-size: 1rem;
-      font-weight: 600;
-      background: var(--tpt-green);
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.25rem 2.5rem;
+      border-radius: 9999px;
+      background-color: var(--tpt-amber);
       color: var(--tpt-warm-white);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+      text-decoration: none;
       border: none;
-      border-radius: 4px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+                  color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .waitlist button:hover { background: var(--tpt-green-dark); }
+    .btn-primary:hover {
+      background-color: var(--tpt-green);
+      color: var(--tpt-warm-white);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.25rem 2.5rem;
+      border-radius: 9999px;
+      background-color: transparent;
+      color: var(--tpt-green);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 1px solid var(--tpt-green);
+      cursor: pointer;
+      transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+                  color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-secondary:hover {
+      background-color: var(--tpt-green);
+      color: var(--tpt-warm-white);
+    }
     .waitlist .tiny {
       flex-basis: 100%;
       font-size: 0.85rem;
@@ -309,6 +356,12 @@
       border-radius: 8px;
       position: relative;
       z-index: 1;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pillar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 63, 46, 0.08);
     }
     .pillar-number {
       display: block;
@@ -367,6 +420,12 @@
       border-radius: 8px;
       display: flex;
       flex-direction: column;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .offer:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 63, 46, 0.08);
     }
     .offer-status {
       display: inline-block;
@@ -446,8 +505,6 @@
       justify-content: center;
     }
     section.cta-band .waitlist input[type="email"] { background: var(--tpt-warm-white); }
-    section.cta-band .waitlist button { background: var(--tpt-amber); }
-    section.cta-band .waitlist button:hover { background: var(--tpt-amber-light); }
     section.cta-band .tiny { color: var(--tpt-amber-light); }
 
     /* FOOTER */
@@ -480,12 +537,12 @@
       opacity: 0.7;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       body { font-size: 16px; }
       section.hero { padding: 3rem 0 2.5rem; }
       .pillar, .offer { padding: 1.75rem 1.25rem; }
       nav.top .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-      .brand-logo { height: 48px; }
+      .brand-logo { height: 56px; }
       .pillar-grid::before {
         top: 0;
         bottom: 0;
@@ -524,7 +581,7 @@
              "tpt-waitlist", triggers the welcome email + free starter resource. -->
         <form class="waitlist" id="waitlist-hero" aria-label="Join the waitlist">
           <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-          <button type="submit">Join the waitlist</button>
+          <button type="submit" class="btn-primary">Join the waitlist</button>
           <span class="tiny">Get the free "First 7 Things to Do" checklist when you join.</span>
         </form>
         <div class="form-success" id="success-hero" role="status">Thanks. We'll be in touch with the free checklist and waitlist updates.</div>
@@ -680,7 +737,7 @@
         <!-- WAITLIST FORM (mirror) — same TODO as hero form: replace with GHL embed when ready. -->
         <form class="waitlist" id="waitlist-bottom" aria-label="Join the waitlist">
           <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-          <button type="submit">Join the waitlist</button>
+          <button type="submit" class="btn-primary">Join the waitlist</button>
           <span class="tiny">Free checklist included. We won't share your address.</span>
         </form>
         <div class="form-success" id="success-bottom" role="status">Thanks. We'll be in touch with the free checklist and waitlist updates.</div>
