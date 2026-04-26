@@ -31,6 +31,12 @@ Format: `YYYY-MM-DD: [observation/rule]` followed by a short *why*.
 
 ---
 
+## tpt-customer-research
+
+*No entries yet. Add as the dad-interview sprint surfaces patterns about voice, anonymization, recruiting, or synthesis approach.*
+
+---
+
 ## General / cross-skill
 
 - 2026-04-25: Customer is "the dad new to family court" (Victor's reframe of pre-filing). Captures pre-filing through early-stage-mid-divorce. Avoid the term "pre-filing" in customer-facing copy — too technical. Use "new to family court," "just got served," "newly facing custody."

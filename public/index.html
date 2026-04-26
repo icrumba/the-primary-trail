@@ -31,6 +31,7 @@
     "@type": "Organization",
     "name": "The Primary Trail",
     "url": "https://theprimarytrail.com",
+    "logo": "https://theprimarytrail.com/assets/logo/logo.png",
     "description": "Coaching and education for dads new to family court. We help dads capture, organize, reflect on, and execute their case — saving thousands in legal fees.",
     "foundingDate": "2026",
     "founder": [
@@ -50,7 +51,8 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "The Primary Trail",
-    "url": "https://theprimarytrail.com"
+    "url": "https://theprimarytrail.com",
+    "dateModified": "2026-04-26"
   }
   </script>
 
@@ -148,6 +150,21 @@
 
     p { margin-bottom: 1rem; }
 
+    .eyebrow {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .heading-accent {
+      color: var(--tpt-amber);
+      font-style: italic;
+    }
+
     .container {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -157,7 +174,7 @@
 
     /* NAV */
     nav.top {
-      padding: 1.5rem 0;
+      padding: 2rem 0;
       border-bottom: 1px solid var(--tpt-line);
       background: var(--tpt-cream);
     }
@@ -172,7 +189,7 @@
     }
     .brand-logo {
       display: block;
-      height: 44px;
+      height: 68px;
       width: auto;
     }
     .nav-tag {
@@ -272,22 +289,43 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
+      position: relative;
+    }
+    .pillar-grid::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--tpt-amber);
+      opacity: 0.25;
+      z-index: 0;
     }
     .pillar {
-      padding: 2rem 1.75rem;
+      padding: 1.5rem;
       background: var(--tpt-warm-white);
       border: 1px solid var(--tpt-line);
       border-radius: 8px;
       position: relative;
+      z-index: 1;
     }
-    .pillar-num {
-      display: inline-block;
+    .pillar-number {
+      display: block;
       font-family: var(--font-serif);
-      font-size: 0.95rem;
-      color: var(--tpt-amber);
+      font-size: 3rem;
       font-weight: 600;
-      letter-spacing: 0.08em;
-      margin-bottom: 1rem;
+      color: var(--tpt-amber);
+      line-height: 1;
+    }
+    .pillar-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--tpt-amber);
+      letter-spacing: 0.12em;
+      margin: 0.5rem 0 1rem;
     }
     .pillar h3 { margin-bottom: 0.75rem; color: var(--tpt-green); }
     .pillar p { color: var(--tpt-warm-gray); margin-bottom: 0; font-size: 0.97rem; }
@@ -447,6 +485,15 @@
       section.hero { padding: 3rem 0 2.5rem; }
       .pillar, .offer { padding: 1.75rem 1.25rem; }
       nav.top .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+      .brand-logo { height: 48px; }
+      .pillar-grid::before {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        height: auto;
+        width: 1px;
+      }
     }
   </style>
 </head>
@@ -498,27 +545,32 @@
   <section class="pillars">
     <div class="container">
       <div class="narrow">
-        <h2>The four pillars: Capture, Organize, Reflect, Execute.</h2>
+        <span class="eyebrow">THE FRAMEWORK</span>
+        <h2>The four pillars: <span class="heading-accent">Capture, Organize, Reflect, Execute.</span></h2>
         <p>Every part of the program maps to one of four pillars. They're how dads stop bleeding money and start walking the trail with a plan.</p>
       </div>
       <div class="pillar-grid">
         <div class="pillar">
-          <span class="pillar-num">01 — CAPTURE</span>
+          <span class="pillar-number">01</span>
+          <span class="pillar-label">CAPTURE</span>
           <h3>Get it all in one place</h3>
           <p>Every email, text, voicemail, photo, screenshot, and date — captured, timestamped, and organized. Most dads lose thousands of dollars right here, by failing to capture what they should have.</p>
         </div>
         <div class="pillar">
-          <span class="pillar-num">02 — ORGANIZE</span>
+          <span class="pillar-number">02</span>
+          <span class="pillar-label">ORGANIZE</span>
           <h3>Build the timeline</h3>
           <p>Turn the pile into a timeline, themes, and evidence categories your lawyer can actually use. Lawyers charge $300–$500 an hour to do this. We teach you to bring it pre-organized.</p>
         </div>
         <div class="pillar">
-          <span class="pillar-num">03 — REFLECT</span>
+          <span class="pillar-number">03</span>
+          <span class="pillar-label">REFLECT</span>
           <h3>Stay grounded. Watch your tone.</h3>
           <p>The judgment layer. AI-assisted help to stay grounded, check your tone before you hit send, and spot patterns. Stop torpedoing your own case in the heat of the moment.</p>
         </div>
         <div class="pillar">
-          <span class="pillar-num">04 — EXECUTE</span>
+          <span class="pillar-number">04</span>
+          <span class="pillar-label">EXECUTE</span>
           <h3>Hand it off, prepared</h3>
           <p>Package the case for your lawyer — or, where allowed, for direct filing. Tighter case. Less time billed. A better outcome for the kids.</p>
         </div>
@@ -538,7 +590,8 @@
   <section class="offerings">
     <div class="container">
       <div class="narrow">
-        <h2>What's coming, and what's available now.</h2>
+        <span class="eyebrow">OFFERINGS</span>
+        <h2>What's coming, and <span class="heading-accent">what's available now.</span></h2>
       </div>
       <div class="offer-grid">
         <div class="offer">
@@ -573,6 +626,7 @@
   <section class="who">
     <div class="container">
       <div class="narrow">
+        <span class="eyebrow">WHO WE'RE FOR</span>
         <h2>Who this is for.</h2>
         <p>Dads new to family court. Not deadbeats, not activists, not trying to "win against mom" — working dads who love their kids and want to walk into a hard process organized, calm, and credible.</p>
         <p>Family court evaluates one thing above all else: what's best for the children. Our entire framework is built around helping you become the most effective advocate for that — in the eyes of the court that's actually watching.</p>
@@ -585,7 +639,8 @@
   <section class="faq">
     <div class="container">
       <div class="narrow">
-        <h2>What dads ask.</h2>
+        <span class="eyebrow">QUESTIONS</span>
+        <h2>What <span class="heading-accent">dads ask.</span></h2>
 
         <div class="faq-item">
           <h3>Are you lawyers?</h3>
@@ -638,7 +693,7 @@
     <div class="container">
       <p class="footer-meta"><strong>The Primary Trail</strong> — A sibling brand under <a href="https://theknowledgejar.com">The Knowledge Jar</a>.</p>
       <p class="disclaimer">The Primary Trail provides coaching and educational services only. We are not lawyers and do not provide legal advice. Information shared is for educational purposes and is not a substitute for the advice of a licensed attorney in your jurisdiction. Outcomes vary; we make no guarantees about case results. By joining the waitlist you consent to receive email from The Primary Trail; you can unsubscribe at any time.</p>
-      <p class="updated">Last updated: April 25, 2026</p>
+      <p class="updated">Last updated: April 26, 2026</p>
       <p class="tiny">© 2026 The Primary Trail. All rights reserved.</p>
     </div>
   </footer>

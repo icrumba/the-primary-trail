@@ -10,6 +10,7 @@ Per the Agentic OS framework (and Lessons 05–08 of the Claude Lesson series), 
 | `tpt-aeo-seo` | AEO/SEO discipline for any user-facing page | "AEO", "SEO", "audit this page", "is this AEO-ready", page creation/edit |
 | `tpt-site-build` | Website conventions (Phase 1 static; Phase 2 Next.js) | "build a page", "edit the site", "scaffold", deploy work |
 | `tpt-ghl-funnel` | GoHighLevel funnels, email sequences, pipelines | "funnel", "email sequence", "GHL", "lead magnet", "waitlist" |
+| `tpt-customer-research` | Interview methodology for crisis-audience qualitative research | "customer research", "dad interviews", "user research", "interview prep", "synthesize interviews" |
 
 ## Skill chaining (typical workflows)
 
@@ -18,6 +19,7 @@ Per the Agentic OS framework (and Lessons 05–08 of the Claude Lesson series), 
 | Build a new landing page | tpt-site-build → tpt-aeo-seo → tpt-upl-check |
 | Write an email sequence | tpt-ghl-funnel → tpt-upl-check |
 | Audit existing copy | tpt-aeo-seo → tpt-upl-check |
+| Customer research sprint | tpt-customer-research → synthesize → feed into course outline / SOUL voice / FAQ copy |
 | Launch a new offering | tpt-ghl-funnel → tpt-site-build → tpt-aeo-seo → tpt-upl-check |
 
 `tpt-upl-check` is always last. It's the gate.

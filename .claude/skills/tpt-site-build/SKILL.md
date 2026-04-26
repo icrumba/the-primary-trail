@@ -63,6 +63,37 @@ Phase 2 (Next.js) inherits the same structure — `public/` is still the static-
 
 Reference URLs in HTML use the absolute path: `/assets/logo/logo.png`, `/assets/images/hero.jpg`, etc.
 
+## Design patterns (locked 2026-04-26)
+
+The visual language for any TPT page. New pages inherit these. Departures need a reason and Victor's call.
+
+### Eyebrow tags
+
+Every full section (not the hero, not pull-quotes) gets a short eyebrow above its H2.
+
+- Element: `<span class="eyebrow">UPPERCASE TEXT</span>`, placed inside the same wrapper as the H2 and immediately before it.
+- Style: ~0.8rem, `--tpt-warm-gray`, letter-spacing ~0.15em, ~0.75rem gap to the H2.
+- Text convention: 1–3 words, all caps, naming the section's role (e.g., "THE FRAMEWORK", "OFFERINGS", "WHO WE'RE FOR", "QUESTIONS"). Direct over clever.
+- Skip the eyebrow on: the hero (the H1 carries the headline) and pull-quotes (they're not section headings).
+
+### Split-clause headings
+
+Long H2s split into two visual clauses; the second clause carries the emotional weight in amber italic.
+
+- Wrap the second half of the H2 in `<span class="heading-accent">`.
+- Style: `color: var(--tpt-amber); font-style: italic;`.
+- When NOT to split: H2s under ~5 words read fine without a split. Don't force one.
+- The H1 is exempt — it carries the page identity and stays single-voice.
+
+### Pillar sequencing
+
+When a page has a 3–5 step framework (or stages) displayed as cards, sequence them visually so the flow is obvious without forcing rigid linearity.
+
+- Each card uses two stacked elements: `<span class="pillar-number">01</span>` (big amber serif chapter number) and `<span class="pillar-label">CAPTURE</span>` (small uppercase amber label).
+- A thin amber connecting line runs behind the row of cards via a `.pillar-grid::before` pseudo-element at low opacity. Horizontal on desktop; flips vertical at ≤600px when cards stack.
+- Card padding is tightened (1.5rem) vs. standalone offering cards so the four read as one grouped unit, not four isolated cards.
+- Reusable for any future "stages of a journey" UI (customer-journey block, course-module sequence, onboarding steps).
+
 ## Steps (typical page build)
 1. Read SOUL.md for voice; tpt-aeo-seo for AEO requirements.
 2. Sketch the page sections (hero, body, CTA, footer).
