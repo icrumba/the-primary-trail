@@ -16,8 +16,8 @@
   <meta property="og:site_name" content="The Primary Trail">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Favicon (inline SVG; replace with PNG variants when produced) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='30,18 75,82 0,82' fill='%231F3F2E'/><polygon points='68,42 100,82 50,82' fill='%231F3F2E'/><path d='M52 82 C 42 68, 58 58, 48 44 C 41 34, 53 24, 60 18' stroke='%23C97B27' stroke-width='8' fill='none' stroke-linecap='round'/></svg>">
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/logo/logo.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,13 +169,12 @@
     .brand-mark {
       display: flex;
       align-items: center;
-      gap: 0.7rem;
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--tpt-green);
     }
-    .brand-mark svg { display: block; }
+    .brand-logo {
+      display: block;
+      height: 44px;
+      width: auto;
+    }
     .nav-tag {
       font-size: 0.85rem;
       color: var(--tpt-warm-gray);
@@ -457,12 +456,7 @@
   <nav class="top">
     <div class="container">
       <a class="brand-mark" href="/" aria-label="The Primary Trail home">
-        <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="30,18 75,82 0,82" fill="#1F3F2E"/>
-          <polygon points="68,42 100,82 50,82" fill="#1F3F2E"/>
-          <path d="M52 82 C 42 68, 58 58, 48 44 C 41 34, 53 24, 60 18" stroke="#C97B27" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>The Primary Trail</span>
+        <img src="/assets/logo/logo.png" alt="The Primary Trail" class="brand-logo" width="600" height="337">
       </a>
       <span class="nav-tag">A <a href="https://theknowledgejar.com">Knowledge Jar</a> brand</span>
     </div>

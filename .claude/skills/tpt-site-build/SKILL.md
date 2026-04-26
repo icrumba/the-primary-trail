@@ -44,6 +44,25 @@ Typography: **Lora** (serif headings) + **Inter** (sans body), via Google Fonts.
 
 When tokens change, update HERE first, then propagate.
 
+
+## File organization (locked 2026-04-26)
+
+**All static assets live under `public/assets/<type>/<file>`. Never flat in `public/` root.**
+
+- Logos → `public/assets/logo/` (e.g., `public/assets/logo/logo.png`)
+- Images / illustrations → `public/assets/images/`
+- Fonts (if self-hosted) → `public/assets/fonts/`
+- Icons → `public/assets/icons/`
+- Open Graph / social-share images → `public/assets/og/`
+
+The only files allowed at `public/` root are top-level web standards: `robots.txt`, `llms.txt`, `sitemap.xml`, `favicon.ico`. Everything else goes in a typed subfolder of `assets/`.
+
+Why: a flat `public/` becomes unmanageable as brand assets accumulate. Typed subfolders make it obvious where to look and where to add.
+
+Phase 2 (Next.js) inherits the same structure — `public/` is still the static-asset root in Next.js.
+
+Reference URLs in HTML use the absolute path: `/assets/logo/logo.png`, `/assets/images/hero.jpg`, etc.
+
 ## Steps (typical page build)
 1. Read SOUL.md for voice; tpt-aeo-seo for AEO requirements.
 2. Sketch the page sections (hero, body, CTA, footer).
