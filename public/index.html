@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Primary Trail — A clear path through family court for dads new to it</title>
-  <meta name="description" content="Coaching and education for dads new to family court. Get the framework to capture, organize, reflect, and execute — and save thousands in legal fees.">
+  <title>The Primary Trail: A clear path through family court for dads new to it</title>
+  <meta name="description" content="Coaching and education for dads new to family court. Get the framework to capture, organize, reflect, and execute, and save thousands in legal fees.">
   <meta name="theme-color" content="#1F3F2E">
   <link rel="canonical" href="https://theprimarytrail.com/">
 
   <!-- Open Graph / social -->
-  <meta property="og:title" content="The Primary Trail — A clear path through family court">
+  <meta property="og:title" content="The Primary Trail: A clear path through family court">
   <meta property="og:description" content="The framework, the language, and the discipline to walk in prepared. Save thousands in legal fees. Show up for your kids.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theprimarytrail.com/">
@@ -32,7 +32,7 @@
     "name": "The Primary Trail",
     "url": "https://theprimarytrail.com",
     "logo": "https://theprimarytrail.com/assets/logo/logo.png",
-    "description": "Coaching and education for dads new to family court. We help dads capture, organize, reflect on, and execute their case — saving thousands in legal fees.",
+    "description": "Coaching and education for dads new to family court. We help dads capture, organize, reflect on, and execute their case, saving thousands in legal fees.",
     "foundingDate": "2026",
     "founder": [
       { "@type": "Person", "name": "Victor Cuevas", "jobTitle": "Co-Founder" }
@@ -75,7 +75,7 @@
         "name": "How is this different from a general divorce coach?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We focus specifically on dads new to family court and on the four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates — the best interest of the children — so the prep helps the dad show up as a credible, organized advocate for his kids in the eyes of the court that's actually watching."
+          "text": "We focus specifically on dads new to family court and on the four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates: the best interest of the children. The prep helps the dad show up as a credible, organized advocate for his kids in the eyes of the court that's actually watching."
         }
       },
       {
@@ -83,7 +83,7 @@
         "name": "What does the course cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Modules map to the four pillars. Capture: how to collect and timestamp every email, text, voicemail, and document without compromising your case. Organize: building a timeline and evidence categories your lawyer can use. Reflect: tone and judgment work, including AI-assisted message review. Execute: packaging your case for your lawyer or, where allowed, for direct filing — saving billable hours."
+          "text": "Modules map to the four pillars. Capture: how to collect and timestamp every email, text, voicemail, and document without compromising your case. Organize: building a timeline and evidence categories your lawyer can use. Reflect: tone and judgment work, including AI-assisted message review. Execute: packaging your case for your lawyer or, where allowed, for direct filing, saving billable hours."
         }
       },
       {
@@ -91,7 +91,7 @@
         "name": "Where are you based? Can I work with you if I'm not in Texas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The course and community are open to dads anywhere in the United States — education and coaching are not state-specific. Our 1:1 coaching tier launches in Texas first, with in-person availability in Collin and Denton counties. As we expand 1:1, additional states will be added. The course gives you the full framework regardless of where you live."
+          "text": "The course and community are open to dads anywhere in the United States. Education and coaching are not state-specific. Our 1:1 coaching tier launches in Texas first, with in-person availability in Collin and Denton counties. As we expand 1:1, additional states will be added. The course gives you the full framework regardless of where you live."
         }
       },
       {
@@ -203,15 +203,9 @@
     }
     .brand-logo {
       display: block;
-      height: 80px;
+      height: 110px;
       width: auto;
     }
-    .nav-tag {
-      font-size: 0.85rem;
-      color: var(--tpt-warm-gray);
-      letter-spacing: 0.02em;
-    }
-    .nav-tag a { color: var(--tpt-warm-gray); text-decoration: underline; text-decoration-color: var(--tpt-line); }
 
     /* HERO */
     section.hero {
@@ -324,8 +318,31 @@
     }
 
     /* PILLARS */
-    section.pillars { padding: 5rem 0 3rem; }
-    section.pillars h2 { margin-bottom: 0.5rem; }
+    section.pillars {
+      position: relative;
+      background-image: url('/assets/images/pillars-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 1.5rem;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    section.pillars::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(31, 63, 46, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: -1;
+    }
+    section.pillars .eyebrow {
+      color: rgba(251, 248, 241, 0.85);
+    }
+    section.pillars h2 {
+      margin-bottom: 0.5rem;
+      color: var(--tpt-warm-white);
+    }
     section.pillars > .container > .narrow > p {
       color: var(--tpt-warm-gray);
       margin-bottom: 3rem;
@@ -333,9 +350,10 @@
     }
     .pillar-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
+      max-width: 1100px;
+      margin: 2rem auto 0;
       position: relative;
     }
     .pillar-grid::before {
@@ -346,8 +364,11 @@
       right: 0;
       height: 1px;
       background: var(--tpt-amber);
-      opacity: 0.25;
+      opacity: 0.55;
       z-index: 0;
+    }
+    @media (max-width: 1023px) {
+      .pillar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     .pillar {
       padding: 1.5rem;
@@ -383,6 +404,18 @@
     .pillar h3 { margin-bottom: 0.75rem; color: var(--tpt-green); }
     .pillar p { color: var(--tpt-warm-gray); margin-bottom: 0; font-size: 0.97rem; }
 
+    .pillar.pillar-execute {
+      background: var(--tpt-amber);
+    }
+    .pillar.pillar-execute .pillar-number,
+    .pillar.pillar-execute .pillar-label,
+    .pillar.pillar-execute h3 {
+      color: var(--tpt-warm-white);
+    }
+    .pillar.pillar-execute p {
+      color: rgba(251, 248, 241, 0.92);
+    }
+
     /* SAVINGS PULL-QUOTE */
     section.savings {
       padding: 4rem 0;
@@ -390,17 +423,22 @@
       color: var(--tpt-cream);
       text-align: center;
     }
-    section.savings p {
+    .savings-quote {
+      max-width: 32ch;
+      margin: 0 auto;
+    }
+    .savings-quote p {
       font-family: var(--font-serif);
       font-size: clamp(1.4rem, 3vw, 2rem);
-      max-width: 30ch;
-      margin: 0 auto 0.5rem;
+      margin: 0 0 0.75rem;
       line-height: 1.3;
       color: var(--tpt-cream);
     }
-    section.savings .attrib {
+    .savings-attribution {
+      display: block;
       font-family: var(--font-sans);
       font-size: 0.95rem;
+      font-style: normal;
       color: var(--tpt-amber-light);
       letter-spacing: 0.05em;
     }
@@ -410,8 +448,10 @@
     section.offerings h2 { margin-bottom: 2.5rem; }
     .offer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      max-width: 980px;
+      margin: 2rem auto 0;
     }
     .offer {
       padding: 2rem 1.75rem;
@@ -542,7 +582,11 @@
       section.hero { padding: 3rem 0 2.5rem; }
       .pillar, .offer { padding: 1.75rem 1.25rem; }
       nav.top .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-      .brand-logo { height: 56px; }
+      .brand-logo { height: 70px; }
+    }
+    @media (max-width: 599px) {
+      .pillar-grid { grid-template-columns: 1fr; }
+      .offer-grid { grid-template-columns: 1fr; }
       .pillar-grid::before {
         top: 0;
         bottom: 0;
@@ -550,6 +594,13 @@
         right: auto;
         height: auto;
         width: 1px;
+      }
+    }
+    @media (max-width: 768px) {
+      section.pillars::before {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(31, 63, 46, 0.85);
       }
     }
   </style>
@@ -562,7 +613,6 @@
       <a class="brand-mark" href="/" aria-label="The Primary Trail home">
         <img src="/assets/logo/logo.png" alt="The Primary Trail" class="brand-logo" width="600" height="337">
       </a>
-      <span class="nav-tag">A <a href="https://theknowledgejar.com">Knowledge Jar</a> brand</span>
     </div>
   </nav>
 
@@ -570,7 +620,7 @@
   <section class="hero">
     <div class="container">
       <div class="narrow">
-        <h1>A clear path through family court — for dads who want to do this right.</h1>
+        <h1>A clear path through family court, built for dads who want to do this right.</h1>
         <p class="lead">Get the framework, the language, and the discipline to walk in prepared. Save thousands in legal fees. Show up for your kids.</p>
 
         <!-- WAITLIST FORM
@@ -593,7 +643,7 @@
   <section class="qa">
     <div class="container">
       <div class="narrow">
-        <p>The Primary Trail is a coaching and education service for dads new to family court. We don't give legal advice — we teach you how to capture what matters, organize it cleanly, communicate without hurting your case, and bring your lawyer the kind of preparation most dads only learn the hard way. The result: thousands of dollars saved, a credible record, and a clearer path through.</p>
+        <p>The Primary Trail is a coaching and education service for dads new to family court. We don't give legal advice. We teach you how to capture what matters, organize it cleanly, communicate without hurting your case, and bring your lawyer the kind of preparation most dads only learn the hard way. The result: thousands of dollars saved, a credible record, and a clearer path through.</p>
       </div>
     </div>
   </section>
@@ -611,13 +661,13 @@
           <span class="pillar-number">01</span>
           <span class="pillar-label">CAPTURE</span>
           <h3>Get it all in one place</h3>
-          <p>Every email, text, voicemail, photo, screenshot, and date — captured, timestamped, and organized. Most dads lose thousands of dollars right here, by failing to capture what they should have.</p>
+          <p>Every email, text, voicemail, photo, screenshot, and date. Captured, timestamped, and organized. Most dads lose thousands of dollars right here, by failing to capture what they should have.</p>
         </div>
         <div class="pillar">
           <span class="pillar-number">02</span>
           <span class="pillar-label">ORGANIZE</span>
           <h3>Build the timeline</h3>
-          <p>Turn the pile into a timeline, themes, and evidence categories your lawyer can actually use. Lawyers charge $300–$500 an hour to do this. We teach you to bring it pre-organized.</p>
+          <p>Turn the pile into a timeline, themes, and evidence categories your lawyer can actually use. Lawyers charge $300 to $500 an hour to do this. We teach you to bring it pre-organized.</p>
         </div>
         <div class="pillar">
           <span class="pillar-number">03</span>
@@ -625,11 +675,11 @@
           <h3>Stay grounded. Watch your tone.</h3>
           <p>The judgment layer. AI-assisted help to stay grounded, check your tone before you hit send, and spot patterns. Stop torpedoing your own case in the heat of the moment.</p>
         </div>
-        <div class="pillar">
+        <div class="pillar pillar-execute">
           <span class="pillar-number">04</span>
           <span class="pillar-label">EXECUTE</span>
           <h3>Hand it off, prepared</h3>
-          <p>Package the case for your lawyer — or, where allowed, for direct filing. Tighter case. Less time billed. A better outcome for the kids.</p>
+          <p>Package the case for your lawyer, or where allowed, for direct filing. Tighter case. Less time billed. A better outcome for the kids.</p>
         </div>
       </div>
     </div>
@@ -638,8 +688,10 @@
   <!-- SAVINGS PULL-QUOTE -->
   <section class="savings">
     <div class="container">
-      <p>"Lawyers charge for organization. We help you bring them organized."</p>
-      <span class="attrib">— THE PRIMARY TRAIL PROMISE</span>
+      <blockquote class="savings-quote">
+        <p>Walk in prepared. Walk in calm. Keep more of your money for your kids.</p>
+        <cite class="savings-attribution">THE PRIMARY TRAIL PROMISE</cite>
+      </blockquote>
     </div>
   </section>
 
@@ -654,7 +706,7 @@
         <div class="offer">
           <span class="offer-status free">Free</span>
           <h3>The First 7 Things to Do</h3>
-          <p>A calm, concrete checklist for the dad who just got served — or knows it's coming. Free when you join the waitlist.</p>
+          <p>A calm, concrete checklist for the dad who just got served, or who knows it's coming. Free when you join the waitlist.</p>
           <a href="#waitlist-cta" class="cta">Get the checklist →</a>
         </div>
         <div class="offer">
@@ -685,9 +737,9 @@
       <div class="narrow">
         <span class="eyebrow">WHO WE'RE FOR</span>
         <h2>Who this is for.</h2>
-        <p>Dads new to family court. Not deadbeats, not activists, not trying to "win against mom" — working dads who love their kids and want to walk into a hard process organized, calm, and credible.</p>
-        <p>Family court evaluates one thing above all else: what's best for the children. Our entire framework is built around helping you become the most effective advocate for that — in the eyes of the court that's actually watching.</p>
-        <p class="emphasis">If you've just been served, or you can see the storm coming, or you're staring at custody papers at 11pm wondering where to start — this is for you.</p>
+        <p>Dads new to family court. Not deadbeats. Not activists. Not trying to "win against mom." Working dads who love their kids and want to walk into a hard process organized, calm, and credible.</p>
+        <p>Family court evaluates one thing above all else: what's best for the children. Our entire framework is built around helping you become the most effective advocate for that, in the eyes of the court that's actually watching.</p>
+        <p class="emphasis">If you've just been served, or you can see the storm coming, or you're staring at custody papers at 11pm wondering where to start, this is for you.</p>
       </div>
     </div>
   </section>
@@ -701,22 +753,22 @@
 
         <div class="faq-item">
           <h3>Are you lawyers?</h3>
-          <p>No. The Primary Trail is a coaching and education service. We teach dads how to capture, organize, reflect on, and execute their case — the prep work that makes a lawyer's hour worth more, or that you can do without a lawyer where allowed. We never draft legal documents, advise on specific legal strategy, or appear in court. Any legal decision should be reviewed with a licensed attorney in your jurisdiction.</p>
+          <p>No. The Primary Trail is a coaching and education service. We teach dads how to capture, organize, reflect on, and execute their case. The prep work that makes a lawyer's hour worth more, or that you can do without a lawyer where allowed. We never draft legal documents, advise on specific legal strategy, or appear in court. Any legal decision should be reviewed with a licensed attorney in your jurisdiction.</p>
         </div>
 
         <div class="faq-item">
           <h3>How is this different from a general divorce coach?</h3>
-          <p>We focus specifically on dads new to family court and on the four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates — the best interest of the children — so the prep helps the dad show up as a credible, organized advocate for his kids, not as someone fighting his ex.</p>
+          <p>We focus specifically on dads new to family court and on the four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates: the best interest of the children. The prep helps the dad show up as a credible, organized advocate for his kids, not as someone fighting his ex.</p>
         </div>
 
         <div class="faq-item">
           <h3>What does the course cover?</h3>
-          <p>Modules map to the four pillars. <strong>Capture:</strong> how to collect and timestamp every email, text, voicemail, and document without compromising your case. <strong>Organize:</strong> building a timeline and evidence categories your lawyer can use. <strong>Reflect:</strong> tone and judgment work, including AI-assisted message review before you hit send. <strong>Execute:</strong> packaging your case for your lawyer or, where allowed, for direct filing — saving billable hours.</p>
+          <p>Modules map to the four pillars. <strong>Capture:</strong> how to collect and timestamp every email, text, voicemail, and document without compromising your case. <strong>Organize:</strong> building a timeline and evidence categories your lawyer can use. <strong>Reflect:</strong> tone and judgment work, including AI-assisted message review before you hit send. <strong>Execute:</strong> packaging your case for your lawyer or, where allowed, for direct filing, saving billable hours.</p>
         </div>
 
         <div class="faq-item">
           <h3>Where are you based? Can you help me if I'm not in Texas?</h3>
-          <p>The course and community are open to dads anywhere in the United States — education and coaching are not state-specific. Our 1:1 coaching tier launches in Texas first, with in-person availability in Collin and Denton counties. As we expand 1:1, additional states will be added. The course gives you the full framework regardless of where you live.</p>
+          <p>The course and community are open to dads anywhere in the United States. Education and coaching are not state-specific. Our 1:1 coaching tier launches in Texas first, with in-person availability in Collin and Denton counties. As we expand 1:1, additional states will be added. The course gives you the full framework regardless of where you live.</p>
         </div>
 
         <div class="faq-item">
@@ -748,7 +800,6 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p class="footer-meta"><strong>The Primary Trail</strong> — A sibling brand under <a href="https://theknowledgejar.com">The Knowledge Jar</a>.</p>
       <p class="disclaimer">The Primary Trail provides coaching and educational services only. We are not lawyers and do not provide legal advice. Information shared is for educational purposes and is not a substitute for the advice of a licensed attorney in your jurisdiction. Outcomes vary; we make no guarantees about case results. By joining the waitlist you consent to receive email from The Primary Trail; you can unsubscribe at any time.</p>
       <p class="updated">Last updated: April 26, 2026</p>
       <p class="tiny">© 2026 The Primary Trail. All rights reserved.</p>
