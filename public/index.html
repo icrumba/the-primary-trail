@@ -22,7 +22,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
@@ -114,6 +114,7 @@
       --tpt-amber: #C97B27;
       --tpt-amber-light: #E5A35E;
       --tpt-cream: #F5EFE3;
+      --tpt-cream-warm: #EFE7D5;
       --tpt-cream-deep: #ECE4D2;
       --tpt-charcoal: #1F1F1F;
       --tpt-warm-gray: #5C5A53;
@@ -146,13 +147,13 @@
     h1, h2, h3 { font-family: var(--font-serif); color: var(--tpt-green); font-weight: 600; line-height: 1.2; }
     h1 {
       font-size: clamp(2.25rem, 6vw, 5.5rem);
-      font-weight: 400;
+      font-weight: 300;
       letter-spacing: -0.02em;
       line-height: 1.05;
     }
     h2 {
       font-size: clamp(1.6rem, 3.5vw, 2.3rem);
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: -0.01em;
       line-height: 1.1;
       margin-bottom: 1rem;
@@ -252,7 +253,7 @@
       font-family: var(--font-sans);
       font-weight: 400;
       font-size: 16px;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.1em;
       text-decoration: none;
       border: none;
       cursor: pointer;
@@ -274,7 +275,7 @@
       font-family: var(--font-sans);
       font-weight: 400;
       font-size: 16px;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.1em;
       text-decoration: none;
       border: 1px solid var(--tpt-green);
       cursor: pointer;
@@ -419,8 +420,8 @@
     /* SAVINGS PULL-QUOTE */
     section.savings {
       padding: 4rem 0;
-      background: var(--tpt-green);
-      color: var(--tpt-cream);
+      background: var(--tpt-cream-warm);
+      color: var(--tpt-charcoal);
       text-align: center;
     }
     .savings-quote {
@@ -432,14 +433,14 @@
       font-size: clamp(1.4rem, 3vw, 2rem);
       margin: 0 0 0.75rem;
       line-height: 1.3;
-      color: var(--tpt-cream);
+      color: var(--tpt-green);
     }
     .savings-attribution {
       display: block;
       font-family: var(--font-sans);
       font-size: 0.95rem;
       font-style: normal;
-      color: var(--tpt-amber-light);
+      color: var(--tpt-warm-gray);
       letter-spacing: 0.05em;
     }
 
@@ -496,7 +497,7 @@
     .offer .cta:hover { color: var(--tpt-amber); }
 
     /* WHO */
-    section.who { padding: 5rem 0; background: var(--tpt-warm-white); }
+    section.who { padding: 5rem 0; background: var(--tpt-cream-warm); }
     section.who p {
       font-size: 1.1rem;
       color: var(--tpt-charcoal);
