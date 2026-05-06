@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; font-family: var(--font-sans); background: var(--tpt-cream); }
+  .field { max-width: 520px; }
+  .label { font-size: 11px; letter-spacing: 0.05em; color: #5C5A53; margin-bottom: 6px; display: block; }
+  input { width: 100%; padding: 14px 14px; font-family: inherit; font-size: 15px; border: 1px solid #DCD3BE; background: #FBF8F1; border-radius: 4px; color: #1F1F1F; outline: none; box-sizing: border-box; transition: border-color 0.15s cubic-bezier(0.4,0,0.2,1); }
+  input.focus { border-color: #1F3F2E; }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .meta { font-size: 11px; color: #5C5A53; margin-top: 8px; }
+</style></head><body>
+<div class="stack">
+  <div class="field"><label class="label">RESTING</label><input type="email" placeholder="Your email"></div>
+  <div class="field"><label class="label">FOCUS</label><input type="email" class="focus" value="dad@example.com"></div>
+</div>
+<div class="meta">1px line border, warm-white fill, 4px radius. Focus → forest border. No ring.</div>
+</body></html>

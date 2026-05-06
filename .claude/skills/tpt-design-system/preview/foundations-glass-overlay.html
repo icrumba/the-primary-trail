@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 0; background: #1F3F2E; }
+  .wrap {
+    position: relative;
+    height: 280px;
+    background-image: url('../assets/images/pillars-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .wrap::before {
+    content: ''; position: absolute; inset: 0;
+    background: rgba(31, 63, 46, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+  }
+  .content {
+    position: relative; z-index: 1;
+    padding: 36px 40px;
+    color: #FBF8F1;
+    font-family: var(--font-sans);
+    max-width: 600px;
+  }
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(251, 248, 241, 0.92);
+    margin-bottom: 14px;
+    display: block;
+  }
+  h2 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 0 14px;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: #FBF8F1;
+  }
+  h2 em { color: #E5A35E; font-style: italic; }
+  p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(251, 248, 241, 0.92);
+    margin: 0;
+    max-width: 52ch;
+  }
+</style></head><body>
+<div class="wrap">
+  <div class="content">
+    <span class="eyebrow">THE FRAMEWORK</span>
+    <h2>The four pillars: <em>Capture, Organize, Reflect, Execute.</em></h2>
+    <p>Forest glass overlay (rgba 0.82 + 8px blur) sits over aerial pine imagery. Headings stay legible; the photograph reads as atmosphere, not subject.</p>
+  </div>
+</div>
+</body></html>

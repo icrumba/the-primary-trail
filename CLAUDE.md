@@ -49,11 +49,13 @@ the-primary-trail/
 │   └── memory/
 │       └── YYYY-MM-DD.md              ← daily session log (one per working day)
 └── .claude/
-    └── skills/                        ← Skills layer
-        ├── tpt-upl-check/SKILL.md     ← UPL compliance gate (TPT non-negotiable)
-        ├── tpt-aeo-seo/SKILL.md       ← AEO/SEO discipline for any user-facing page
-        ├── tpt-site-build/SKILL.md    ← landing page / website conventions
-        └── tpt-ghl-funnel/SKILL.md    ← GoHighLevel funnels and sequences
+    └── skills/                          ← Skills layer
+        ├── tpt-design-system/SKILL.md   ← locked design tokens + brand book + UI kit
+        ├── tpt-upl-check/SKILL.md       ← UPL compliance gate (TPT non-negotiable)
+        ├── tpt-aeo-seo/SKILL.md         ← AEO/SEO discipline for any user-facing page
+        ├── tpt-site-build/SKILL.md      ← landing page / website conventions
+        ├── tpt-ghl-funnel/SKILL.md      ← GoHighLevel funnels and sequences
+        └── tpt-customer-research/SKILL.md ← dad-interview methodology (Phase 0 sprint)
 ```
 
 ## Memory and learnings (Agentic OS — Self-Maintenance layer)

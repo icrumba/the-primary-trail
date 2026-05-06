@@ -6,6 +6,7 @@ Per the Agentic OS framework (and Lessons 05–08 of the Claude Lesson series), 
 
 | Skill | Purpose | Triggers on |
 |---|---|---|
+| `tpt-design-system` | Locked design tokens + brand book + UI kit reference. Auto-loaded for any design/UI work. | "design", "tokens", "components", "design system", "brand book", "UI kit", page builds |
 | `tpt-upl-check` | UPL + DTPA compliance gate (TPT non-negotiable) | "UPL check", "compliance review", "is this clean", + final gate on every customer-facing piece |
 | `tpt-aeo-seo` | AEO/SEO discipline for any user-facing page | "AEO", "SEO", "audit this page", "is this AEO-ready", page creation/edit |
 | `tpt-site-build` | Website conventions (Phase 1 static; Phase 2 Next.js) | "build a page", "edit the site", "scaffold", deploy work |
@@ -16,11 +17,11 @@ Per the Agentic OS framework (and Lessons 05–08 of the Claude Lesson series), 
 
 | Workflow | Chain |
 |---|---|
-| Build a new landing page | tpt-site-build → tpt-aeo-seo → tpt-upl-check |
+| New page build | tpt-design-system → tpt-site-build → tpt-aeo-seo → tpt-upl-check |
 | Write an email sequence | tpt-ghl-funnel → tpt-upl-check |
 | Audit existing copy | tpt-aeo-seo → tpt-upl-check |
 | Customer research sprint | tpt-customer-research → synthesize → feed into course outline / SOUL voice / FAQ copy |
-| Launch a new offering | tpt-ghl-funnel → tpt-site-build → tpt-aeo-seo → tpt-upl-check |
+| Launch a new offering | tpt-design-system → tpt-ghl-funnel → tpt-site-build → tpt-aeo-seo → tpt-upl-check |
 
 `tpt-upl-check` is always last. It's the gate.
 

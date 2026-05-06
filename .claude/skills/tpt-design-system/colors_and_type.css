@@ -1,0 +1,196 @@
+/* ============================================================
+   The Primary Trail — Foundational Tokens
+   Source of truth for color, type, spacing, radii, motion.
+   Mirrors values from the live site (public/index.html).
+   ============================================================ */
+
+/* Webfonts — Lora (serif) + Inter (sans). Loaded from Google Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  /* ---------- COLOR — Brand ---------- */
+  --tpt-green:        #1F3F2E;   /* Forest. Primary brand. Headings, footer ground. */
+  --tpt-green-dark:   #142B1F;   /* Deepest forest. Footer, depth. */
+  --tpt-green-soft:   #2C5440;   /* Hover/secondary green. */
+  --tpt-amber:        #C97B27;   /* Trail amber. Highlight ONLY (CTAs, italics, sequence numbers, Execute pillar). */
+  --tpt-amber-light:  #E5A35E;   /* Soft amber. Footer accent text. */
+
+  /* ---------- COLOR — Neutrals (warm cream system) ---------- */
+  --tpt-cream:        #F5EFE3;   /* Default page background. */
+  --tpt-cream-warm:   #EFE7D5;   /* Alt section background. Used to create rhythm. */
+  --tpt-cream-deep:   #ECE4D2;   /* Pill/status backgrounds. */
+  --tpt-warm-white:   #FBF8F1;   /* Card surfaces, input fields. */
+  --tpt-line:         #DCD3BE;   /* Hairline rules, input borders, divider lines. */
+
+  /* ---------- COLOR — Text ---------- */
+  --tpt-charcoal:     #1F1F1F;   /* Body copy. */
+  --tpt-warm-gray:    #5C5A53;   /* Secondary text, lead/sub copy, eyebrows. */
+  --tpt-navy:         #0F2027;   /* Deep CTA band background. */
+
+  /* ---------- COLOR — Semantic ---------- */
+  --bg-page:          var(--tpt-cream);
+  --bg-section-alt:   var(--tpt-cream-warm);
+  --bg-card:          var(--tpt-warm-white);
+  --bg-overlay-dark:  rgba(31, 63, 46, 0.72);   /* Forest glass overlay over imagery. */
+  --bg-cta-band:      var(--tpt-navy);
+  --bg-footer:        var(--tpt-green-dark);
+
+  --fg-default:       var(--tpt-charcoal);
+  --fg-muted:         var(--tpt-warm-gray);
+  --fg-on-dark:       var(--tpt-warm-white);
+  --fg-on-dark-muted: rgba(251, 248, 241, 0.85);
+  --fg-heading:       var(--tpt-green);
+  --fg-accent:        var(--tpt-amber);
+  --fg-link:          var(--tpt-green);
+  --fg-link-hover:    var(--tpt-amber);
+
+  --border-hairline:  var(--tpt-line);
+
+  /* ---------- TYPE — Families ---------- */
+  --font-serif:       "Lora", Georgia, serif;            /* Headings, brand voice. */
+  --font-sans:        "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* ---------- TYPE — Display scale (clamp for fluid hero/headings) ---------- */
+  --fs-h1:            clamp(2.25rem, 6vw, 5.5rem);   /* 36–88px. Lora 300, tracked tight. */
+  --fs-h2:            clamp(1.6rem, 3.5vw, 2.3rem);  /* 25.6–36.8px. Lora 400. */
+  --fs-h3:            1.25rem;                        /* 20px. Lora 600. */
+  --fs-lead:          22px;                           /* Inter 300. Hero subhead. */
+  --fs-body:          19px;                           /* Inter 400. Default body. */
+  --fs-sm:            0.97rem;                        /* ~15.5px. Card body, FAQ. */
+  --fs-xs:            0.85rem;                        /* 13.6px. Disclaimers, tiny meta. */
+  --fs-eyebrow:       0.8rem;                         /* 12.8px. Inter 600 + uppercase. */
+  --fs-quote-lg:      clamp(1.4rem, 3vw, 2rem);       /* Savings pull-quote. */
+
+  /* ---------- TYPE — Weights ---------- */
+  --fw-light:         300;
+  --fw-regular:       400;
+  --fw-medium:        500;
+  --fw-semibold:      600;
+  --fw-bold:          700;
+
+  /* ---------- TYPE — Line height & tracking ---------- */
+  --lh-display:       1.05;
+  --lh-heading:       1.1;
+  --lh-tight:         1.2;
+  --lh-prose:         1.65;
+  --lh-loose:         1.7;
+
+  --ls-tight:        -0.02em;   /* H1. */
+  --ls-tighter:      -0.01em;   /* H2. */
+  --ls-eyebrow:       0.15em;   /* Eyebrow uppercase. */
+  --ls-pill:          0.10em;   /* Pill CTA letter-spacing. Brand signature. */
+  --ls-label:         0.12em;   /* Pillar labels. */
+
+  /* ---------- SPACING ---------- */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.5rem;    /* 24px */
+  --space-6:  2rem;      /* 32px */
+  --space-7:  2.5rem;    /* 40px */
+  --space-8:  3rem;      /* 48px */
+  --space-9:  4rem;      /* 64px */
+  --space-10: 5rem;      /* 80px */
+  --space-11: 6rem;      /* 96px */
+
+  /* ---------- LAYOUT ---------- */
+  --container-max:    1080px;
+  --content-max:      720px;   /* Narrow column inside container — used for headings/prose. */
+
+  /* ---------- RADII ---------- */
+  --radius-sm:        4px;     /* Inputs, status pills. */
+  --radius-md:        8px;     /* Cards (pillars, offers). */
+  --radius-pill:      9999px;  /* CTAs. Brand signature. */
+
+  /* ---------- BORDERS ---------- */
+  --border-1:         1px solid var(--tpt-line);
+  --border-emphasis:  3px solid var(--tpt-amber);   /* Emphasis pull-quote left rule. */
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-card-hover: 0 8px 24px rgba(31, 63, 46, 0.08);
+
+  /* ---------- MOTION ---------- */
+  --ease-standard:    cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:         0.15s;   /* Color/state. */
+  --dur-base:         0.20s;   /* Card lift. */
+
+  /* ---------- EFFECTS ---------- */
+  --blur-glass:       8px;     /* Glass overlay on pillars background. */
+}
+
+/* ============================================================
+   ELEMENT DEFAULTS — match the live site behavior.
+   Apply by linking this stylesheet alongside reset.
+   ============================================================ */
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-prose);
+  color: var(--fg-default);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--fg-link);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
+a:hover { color: var(--fg-link-hover); }
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: var(--fg-heading);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-light);     /* Lora 300 — defining choice */
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-display);
+}
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-regular);   /* Lora 400 */
+  letter-spacing: var(--ls-tighter);
+  line-height: var(--lh-heading);
+}
+h3 { font-size: var(--fs-h3); }
+
+p { margin-bottom: 1rem; }
+
+/* ============================================================
+   UTILITY CLASSES — brand-canonical building blocks
+   ============================================================ */
+
+.tpt-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  color: var(--fg-muted);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+
+.tpt-heading-accent {
+  color: var(--fg-accent);
+  font-style: italic;
+}
+
+.tpt-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.tpt-narrow {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
