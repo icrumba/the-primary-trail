@@ -2,7 +2,7 @@
 
 Starter roadmap. Living document. Updated as decisions resolve and milestones land.
 
-Kickoff: **2026-04-25.** Today: **2026-04-25.**
+Kickoff: **2026-04-25.** Today: **2026-05-15.**
 
 ---
 
@@ -16,10 +16,11 @@ The "stop, breathe, and lay the rails" phase. No customer-facing work yet.
 - [x] Identity docs scaffolded (CLAUDE.md, USER.md, SOUL.md)
 - [ ] Co-founder working agreement drafted (decision lanes, dispute path, vesting language) — owner: Victor + buddy — due 2026-05-09
 - [ ] Domain research deep-dive: top 5 competitor offerings (DadsRights, custodyx, family-court coaching market) — voice, pricing, claims, UPL posture — due 2026-05-09
-- [ ] Texas LLC formed — standard LLC, NOT PLLC (coaching is not a licensed profession in Texas, so PLLC is the wrong vehicle) — owner: Victor — due 2026-05-09
+- [x] **Legal entity pivot: DBA, not LLC.** Decision locked 2026-05-15. TPT operates as a DBA (Assumed Name) under The Knowledge Jar's existing Texas LLC. Trade-off: simpler/cheaper than forming a new entity; TKJ liability and TPT liability are shared (no shield between brands). Mitigation: tight engagement-letter scope (UPL-clean coaching/education only) + TKJ E&O policy amended to cover TPT.
+- [ ] File / confirm Assumed Name Certificate (DBA) for TPT under TKJ entity at Texas SOS or county clerk — owner: Victor — due 2026-05-23 *(mark complete with filing date if already filed)*
 - [ ] Customer research: 8–12 conversations with target dads (newly-in-family-court) — what they wish they'd known, what they paid for that didn't help, what they'd have paid for — due 2026-05-16
 - [ ] Attorney advisor identified — one Texas family-law attorney willing to review materials, sit on the referral panel, and flag UPL risk — owner: Victor — due 2026-05-16
-- [ ] E&O + cyber liability insurance bound on the LLC — target $1M / $1M limits, budget ~$400–1,500/yr (varies by carrier and state scope) — owner: Victor — due 2026-05-16
+- [ ] E&O + cyber liability insurance — amend TKJ's existing policy to cover TPT (add TPT as named insured / DBA rider). Target $1M / $1M limits — owner: Victor — due 2026-05-23 *(rescheduled from 2026-05-16; aligns with attorney advisor placement and DBA filing)*
 - [ ] Course outline v1 — chapters, learning objectives, sequencing — due 2026-05-23
 - [ ] Brand assets v1 — wordmark, color, type system — due 2026-05-23
 - [ ] CDC Certified Divorce Coach — enrolled and first module complete (full credential continues into Phase 1) — owner: buddy (lead coach) — due 2026-05-23
@@ -36,7 +37,7 @@ The "stop, breathe, and lay the rails" phase. No customer-facing work yet.
 - Course delivery platform (Teachable / Kajabi / Podia / custom — recommend after research).
 - State scope at launch (national vs. state-by-state — affects UPL language).
 
-**Exit criteria for Phase 0:** identity docs final, working agreement signed, course outline approved, attorney advisor in place, Texas LLC formed, insurance bound, engagement-letter template attorney-reviewed.
+**Exit criteria for Phase 0:** identity docs final, working agreement signed, course outline approved, attorney advisor in place, **DBA filed (TPT under TKJ)**, **TPT covered under TKJ's amended E&O insurance**, engagement-letter template attorney-reviewed.
 
 ---
 
