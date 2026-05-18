@@ -6,6 +6,26 @@ Whole-stack implementation guide. Paste-ready specs for Victor to build in GoHig
 **Skill used:** `tpt-ghl-funnel` — see `.claude/skills/tpt-ghl-funnel/SKILL.md` for methodology.
 **Voice gate:** SOUL.md (calm older brother). Every email and form passes the 11pm test.
 
+## Location architecture (read first)
+
+Victor is currently building TPT inside the shared **TKJ location** (ID `44qPJoWvrlZfP0p2lOef`) because he doesn't own the parent agency ("scrapes" / Agentic Academy reseller plan) and can't create new sub-accounts himself. An Agentic Academy ticket is in flight to provision a dedicated TPT sub-account.
+
+**Until that lands, every TPT artifact built in GHL gets the `TPT — ` display-name prefix** so it's visually distinguishable from any TKJ artifact that may appear later in the same location:
+
+| Artifact type | TPT display name in GHL |
+|---|---|
+| Pipeline | `TPT — Customer Journey` |
+| Tags | `tpt-waitlist`, `tpt-strategy-call-booked`, etc. *(already prefixed)* |
+| Calendars | `TPT — Strategy Call (Free 15 min)`, `TPT — Gold Hourly Session` |
+| Forms | `TPT — Waitlist (Lead Magnet)`, `TPT — Platinum Application`, `TPT — Diamond Application` |
+| Workflows | `TPT — Welcome + Nurture`, `TPT — Strategy Call Lifecycle`, `TPT — Gold Session Lifecycle`, `TPT — Retainer Application Lifecycle` |
+| Email templates | `TPT — nurture 01 — checklist delivery`, etc. |
+| Outgoing email sender | `Victor & Hako at The Primary Trail` from `hello@theprimarytrail.com` |
+
+When the dedicated TPT sub-account lands, this convention makes migration a clean lift-and-shift (filter by `TPT — ` prefix and `tpt-*` tags, export, import).
+
+
+
 ---
 
 ## What's in this folder
