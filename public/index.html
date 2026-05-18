@@ -17,7 +17,10 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
-  <link rel="icon" href="/assets/logo/logo.png">
+  <link rel="icon" href="/assets/logo/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +55,7 @@
     "@type": "WebSite",
     "name": "The Primary Trail",
     "url": "https://theprimarytrail.com",
-    "dateModified": "2026-05-07"
+    "dateModified": "2026-05-17"
   }
   </script>
 
@@ -99,7 +102,7 @@
         "name": "What will it cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Founding-member pricing is reserved for waitlist members. The course is built to pay for itself many times over by reducing the legal-fee meter your lawyer otherwise charges to organize what you can organize yourself. 1:1 coaching is offered as a monthly retainer for active cases or hourly for one-off prep sessions. Specific numbers go to waitlist members first."
+          "text": "We offer three tiers of 1:1 support: Gold ($175/hour, ad-hoc support), Platinum ($700/month, ongoing partnership), and Diamond ($1,200/month, in-person + virtual in Dallas/Collin County). Every engagement starts with a free 15-minute Strategy Call. The self-paced Primary Trail course is in development and will open with founding-member pricing for waitlist members."
         }
       }
     ]
@@ -624,6 +627,245 @@
         background-color: rgba(31, 63, 46, 0.85);
       }
     }
+
+    /* HERO CTA ROW */
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+      margin: 0 0 1.5rem;
+    }
+    .hero-cta-row .or {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.02em;
+    }
+
+    /* WHO WE ARE */
+    section.who-we-are {
+      padding: 5rem 0;
+      background: var(--tpt-cream);
+      border-top: 1px solid var(--tpt-line);
+    }
+    .who-we-are .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    @media (max-width: 800px) {
+      .who-we-are .grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .who-we-are .text { max-width: 50ch; }
+    .who-we-are img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+    .who-we-are p.upl-line {
+      font-size: 0.95rem;
+      color: var(--tpt-warm-gray);
+      font-style: italic;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--tpt-line);
+    }
+
+    /* BENEFITS */
+    section.benefits {
+      padding: 5rem 0;
+      background: var(--tpt-warm-white);
+    }
+    section.benefits .narrow > h2 { margin-bottom: 2.5rem; }
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 2rem auto 0;
+    }
+    @media (max-width: 1023px) {
+      .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 599px) {
+      .benefit-grid { grid-template-columns: 1fr; }
+    }
+    .benefit {
+      padding: 1.75rem;
+      background: var(--tpt-cream);
+      border: 1px solid var(--tpt-line);
+      border-radius: 8px;
+    }
+    .benefit-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--tpt-amber);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .benefit h3 {
+      margin-bottom: 0.5rem;
+      color: var(--tpt-green);
+      font-size: 1.1rem;
+    }
+    .benefit p {
+      color: var(--tpt-warm-gray);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    /* PRICING TIERS */
+    section.tiers {
+      padding: 5rem 0;
+      background: var(--tpt-cream-warm);
+    }
+    section.tiers > .container > .narrow { margin-bottom: 2.5rem; }
+    section.tiers > .container > .narrow > p {
+      color: var(--tpt-warm-gray);
+      font-size: 1.1rem;
+    }
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .tier-grid { grid-template-columns: 1fr; }
+    }
+    .tier {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.75rem;
+      background: var(--tpt-warm-white);
+      border: 1px solid var(--tpt-line);
+      border-radius: 8px;
+    }
+    .tier.tier-featured {
+      background: var(--tpt-green);
+      color: var(--tpt-warm-white);
+      border-color: var(--tpt-green);
+    }
+    .tier.tier-featured .tier-name,
+    .tier.tier-featured h3,
+    .tier.tier-featured .tier-price {
+      color: var(--tpt-warm-white);
+    }
+    .tier.tier-featured .tier-tagline,
+    .tier.tier-featured .tier-bestfor,
+    .tier.tier-featured li,
+    .tier.tier-featured .tier-includes-label {
+      color: rgba(251, 248, 241, 0.92);
+    }
+    .tier-name {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--tpt-amber);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .tier-tagline {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .tier-price {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--tpt-green);
+      line-height: 1;
+    }
+    .tier-price-unit {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.1em;
+      margin-left: 0.25rem;
+    }
+    .tier.tier-featured .tier-price-unit { color: rgba(251, 248, 241, 0.85); }
+    .tier-bestfor {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--tpt-warm-gray);
+      margin: 1rem 0 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--tpt-line);
+      line-height: 1.5;
+    }
+    .tier.tier-featured .tier-bestfor {
+      border-bottom-color: rgba(251, 248, 241, 0.2);
+    }
+    .tier-includes-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .tier ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+      font-size: 0.92rem;
+      color: var(--tpt-charcoal);
+    }
+    .tier li {
+      padding: 0.4rem 0 0.4rem 1.25rem;
+      position: relative;
+      line-height: 1.4;
+    }
+    .tier li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--tpt-amber);
+    }
+    .tier .btn-tier {
+      margin-top: auto;
+      display: inline-block;
+      text-align: center;
+      padding: 0.95rem 1.5rem;
+      background: var(--tpt-amber);
+      color: var(--tpt-warm-white);
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: background-color 0.15s, color 0.15s;
+    }
+    .tier .btn-tier:hover {
+      background: var(--tpt-green);
+      color: var(--tpt-warm-white);
+    }
+    .tier.tier-featured .btn-tier:hover {
+      background: var(--tpt-warm-white);
+      color: var(--tpt-green);
+    }
   </style>
 </head>
 <body>
@@ -648,12 +890,19 @@
         <h1>For the dad who wants to walk in prepared.</h1>
         <p class="lead">The dad who walks in prepared, organized, and steady shapes the story his kids need told.</p>
 
+        <div class="hero-cta-row">
+          <a href="[STRATEGY_CALL_URL]" class="btn-primary">Schedule a 15-min Strategy Call</a>
+          <span class="or">or grab the free checklist below</span>
+        </div>
+
         <!-- WAITLIST FORM
              TODO (Victor / GHL): Replace this entire <form> with your GoHighLevel
              form embed (iframe or script) once the GHL form is built. Keep
              the .waitlist class on the wrapper so styling carries over.
              Recommended GHL setup: single-field email capture form, tagged
-             "tpt-waitlist", triggers the welcome email + free starter resource. -->
+             "tpt-waitlist", triggers the welcome email + free starter resource.
+             The Strategy Call CTA above links to [STRATEGY_CALL_URL] — replace
+             with the GHL calendar URL for Calendar 1 (see ghl/calendars.md). -->
         <form class="waitlist" id="waitlist-hero" aria-label="Join the waitlist">
           <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
           <button type="submit" class="btn-primary">Join the waitlist</button>
@@ -664,11 +913,66 @@
     </div>
   </section>
 
+  <!-- WHO WE ARE -->
+  <section class="who-we-are">
+    <div class="container">
+      <div class="grid">
+        <div class="image">
+          <img
+            src="/assets/images/vic-hako-1200.jpg"
+            srcset="/assets/images/vic-hako-800.jpg 800w, /assets/images/vic-hako-1200.jpg 1200w, /assets/images/vic-hako-1600.jpg 1600w"
+            sizes="(max-width: 800px) 100vw, 50vw"
+            alt="Victor Cuevas and Hakan Oksuzler, co-founders of The Primary Trail"
+            width="1200" height="796"
+            loading="lazy">
+        </div>
+        <div class="text">
+          <span class="eyebrow">WHO WE ARE</span>
+          <h2>Two dads. Two cases. <span class="heading-accent">One framework.</span></h2>
+          <p>We're ordinary dads who walked through extraordinary moments in the family court system. We learned what to capture, what to organize, what to wait on, and what to say and not say. We built it into a framework — the one we use with the dads we work with now.</p>
+          <p class="upl-line">We are not attorneys and do not provide legal advice. We provide preparation, coaching, and practical real-world guidance rooted in lived experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- QUICK ANSWER -->
   <section class="qa">
     <div class="container">
       <div class="narrow">
         <p>The Primary Trail is a coaching and education service for dads new to family court. We don't give legal advice. We teach you how to capture what matters, organize it cleanly, communicate without hurting your case, and bring your lawyer the kind of preparation most dads only learn the hard way. The result: thousands of dollars saved, a credible record, and a clearer path through.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <div class="container">
+      <div class="narrow">
+        <span class="eyebrow">WHAT YOU GET</span>
+        <h2>Strategic support for dads. <span class="heading-accent">Better preparation for everyone.</span></h2>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit">
+          <span class="benefit-label">01 — Your role</span>
+          <h3>Strengthen your role as Dad</h3>
+          <p>Make informed decisions and show up credibly — in court, in mediation, in front of evaluators.</p>
+        </div>
+        <div class="benefit">
+          <span class="benefit-label">02 — Time + money</span>
+          <h3>Save time and money</h3>
+          <p>Strategic preparation that reduces conflict, limits unnecessary legal fees, and avoids costly missteps.</p>
+        </div>
+        <div class="benefit">
+          <span class="benefit-label">03 — Focus</span>
+          <h3>Focus on what matters most</h3>
+          <p>Your children. We help you co-parent with purpose, stability, and respect.</p>
+        </div>
+        <div class="benefit">
+          <span class="benefit-label">04 — Confidence</span>
+          <h3>Clear strategy. Confident you.</h3>
+          <p>From documentation to facilitation, we prepare you to show up calm, credible, and prepared.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -720,37 +1024,69 @@
     </div>
   </section>
 
-  <!-- OFFERINGS -->
-  <section class="offerings">
+  <!-- PRICING TIERS -->
+  <section class="tiers" id="tiers">
     <div class="container">
       <div class="narrow">
-        <span class="eyebrow">OFFERINGS</span>
-        <h2>What's coming, and <span class="heading-accent">what's available now.</span></h2>
+        <span class="eyebrow">HOW WE WORK TOGETHER</span>
+        <h2>Three ways forward. <span class="heading-accent">Pick the one that fits.</span></h2>
+        <p>Every engagement starts with a free 15-minute Strategy Call. From there, choose how much support you want.</p>
       </div>
-      <div class="offer-grid">
-        <div class="offer">
-          <span class="offer-status free">Free</span>
-          <h3>The First 7 Things to Do</h3>
-          <p>A calm, concrete checklist for the dad who just got served, or who knows it's coming. Free when you join the waitlist.</p>
-          <a href="#waitlist-cta" class="cta">Get the checklist →</a>
+      <div class="tier-grid">
+        <div class="tier">
+          <span class="tier-name">Gold</span>
+          <span class="tier-tagline">Virtual support — essential strategy</span>
+          <div>
+            <span class="tier-price">$175</span><span class="tier-price-unit">/hr</span>
+          </div>
+          <p class="tier-bestfor">For dads who need flexible, on-demand support for specific questions, document reviews, or short-term challenges.</p>
+          <span class="tier-includes-label">Includes</span>
+          <ul>
+            <li>Ad-hoc consultation via secure phone or Zoom</li>
+            <li>Email support between sessions (typically within 1 business day)</li>
+            <li>Document review or preparation support (30 minutes)</li>
+            <li>Strategic preparation for immediate challenges and decisions</li>
+            <li>Practical resources, templates, and checklists</li>
+          </ul>
+          <a href="[GOLD_URL]" class="btn-tier">Book a Gold session</a>
         </div>
-        <div class="offer">
-          <span class="offer-status coming">Coming soon</span>
-          <h3>The Primary Trail Course</h3>
-          <p>Self-paced course covering the full Capture → Organize → Reflect → Execute framework. Founding-member pricing for waitlist members.</p>
-          <a href="#waitlist-cta" class="cta">Join the waitlist →</a>
+        <div class="tier tier-featured">
+          <span class="tier-name">Platinum</span>
+          <span class="tier-tagline">Monthly strategic partnership</span>
+          <div>
+            <span class="tier-price">$700</span><span class="tier-price-unit">/mo</span>
+          </div>
+          <p class="tier-bestfor">For dads who want consistent, proactive support and a true partner over the months ahead.</p>
+          <span class="tier-includes-label">Includes</span>
+          <ul>
+            <li>One 60-minute strategy session weekly (via Zoom)</li>
+            <li>Priority email support (typically within 1 business day)</li>
+            <li>Ongoing review of documents, timelines, and case developments</li>
+            <li>Preparation for parenting facilitation or mediation</li>
+            <li>Guidance on assembling and organizing information for your attorney</li>
+            <li>One Parent Facilitator / Custody Evaluator mock session per month</li>
+          </ul>
+          <a href="[PLATINUM_APPLICATION_URL]" class="btn-tier">Apply for Platinum</a>
         </div>
-        <div class="offer">
-          <span class="offer-status open">Apply for early access</span>
-          <h3>1:1 Coaching</h3>
-          <p>Premium tier for dads who want a coach walking the trail with them. Limited slots at launch. Texas-based, with in-person availability in Collin and Denton counties.</p>
-          <a href="#waitlist-cta" class="cta">Apply for a slot →</a>
-        </div>
-        <div class="offer">
-          <span class="offer-status coming">After launch</span>
-          <h3>Private Community</h3>
-          <p>A private space for dads on the trail. Peer support, monthly Q&amp;As, and accountability for the work. Opens after the course ships.</p>
-          <a href="#waitlist-cta" class="cta">Get notified →</a>
+        <div class="tier">
+          <span class="tier-name">Diamond</span>
+          <span class="tier-tagline">In-person + virtual — full-service partnership</span>
+          <div>
+            <span class="tier-price">$1,200</span><span class="tier-price-unit">/mo</span>
+          </div>
+          <p class="tier-bestfor">For Dallas / Collin County dads who want comprehensive, hands-on support and in-person preparation for the moments that matter.</p>
+          <span class="tier-includes-label">Includes everything in Platinum, plus</span>
+          <ul>
+            <li>One 90-minute in-person strategy session per month (Dallas / Collin County)</li>
+            <li>Two additional 60-minute virtual sessions per month</li>
+            <li>Comprehensive case strategy and roadmap development</li>
+            <li>Deep-dive preparation for parenting facilitations, mediations, and evaluations</li>
+            <li>Two Parent Facilitator / Custody Evaluator mock sessions per month</li>
+            <li>Fast response on time-sensitive issues (typically within 24 hours)</li>
+            <li>Coordination with your attorney (operational, not legal — if desired)</li>
+            <li>Optional attendance at select in-person meetings (mediation; facilitation and evaluations where permitted)</li>
+          </ul>
+          <a href="[DIAMOND_APPLICATION_URL]" class="btn-tier">Apply for Diamond</a>
         </div>
       </div>
     </div>
@@ -798,7 +1134,7 @@
 
         <div class="faq-item">
           <h3>What will it cost?</h3>
-          <p>Founding-member pricing is reserved for waitlist members. The course is built to pay for itself many times over by reducing the legal-fee meter your lawyer otherwise charges to organize what you can organize yourself. 1:1 coaching is offered as a monthly retainer for active cases or hourly for one-off prep sessions. Specific numbers go to waitlist members first.</p>
+          <p>We offer three tiers of 1:1 support: <strong>Gold</strong> ($175 / hour, ad-hoc support), <strong>Platinum</strong> ($700 / month, ongoing partnership), and <strong>Diamond</strong> ($1,200 / month, in-person + virtual in Dallas / Collin County). Every engagement starts with a free 15-minute Strategy Call. The self-paced Primary Trail course is in development and will open with founding-member pricing for waitlist members.</p>
         </div>
       </div>
     </div>
@@ -809,7 +1145,11 @@
     <div class="container">
       <div class="narrow">
         <h2>Step onto the trail.</h2>
-        <p>Join the waitlist and we'll send the free "First 7 Things to Do" checklist plus founding-member access when the course opens.</p>
+        <p>Schedule a free 15-minute Strategy Call to talk through where you are. Or grab the "First 7 Things to Do" checklist below for a calm starting point.</p>
+
+        <div class="hero-cta-row">
+          <a href="[STRATEGY_CALL_URL]" class="btn-primary">Schedule a 15-min Strategy Call</a>
+        </div>
 
         <!-- WAITLIST FORM (mirror) — same TODO as hero form: replace with GHL embed when ready. -->
         <form class="waitlist" id="waitlist-bottom" aria-label="Join the waitlist">
@@ -826,7 +1166,7 @@
   <footer>
     <div class="container">
       <p class="disclaimer">The Primary Trail provides coaching and educational services only. We are not lawyers and do not provide legal advice. Information shared is for educational purposes and is not a substitute for the advice of a licensed attorney in your jurisdiction. Outcomes vary; we make no guarantees about case results. By joining the waitlist you consent to receive email from The Primary Trail; you can unsubscribe at any time.</p>
-      <p class="updated">Last updated: May 7, 2026</p>
+      <p class="updated">Last updated: May 17, 2026</p>
       <p class="tiny">© 2026 The Primary Trail. All rights reserved.</p>
     </div>
   </footer>
