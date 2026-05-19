@@ -613,7 +613,11 @@
       max-width: 1100px;
       margin: 2rem auto 0;
     }
-    @media (max-width: 900px) {
+    /* 6 cards now: 3x2 desktop, 2x3 tablet, 1x6 mobile */
+    @media (max-width: 1023px) and (min-width: 600px) {
+      .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 599px) {
       .stat-grid { grid-template-columns: 1fr; }
     }
     .stat-card {
@@ -1367,30 +1371,51 @@
     <div class="container">
       <div class="narrow">
         <span class="eyebrow">WHAT MOST DADS DON'T KNOW</span>
-        <h2>The reality, by the numbers. <span class="heading-accent">Walk in with eyes open.</span></h2>
-        <p>The system isn't built for the dad who walks in reacting. It rewards the dad who walks in prepared.</p>
+        <h2>The reality, by the numbers.</h2>
+        <p>The cost of being unprepared lands on you, your kids, and your wallet.</p>
       </div>
       <div class="stat-grid">
-        <div class="stat-card" id="stat-custody-outcomes">
-          <span class="stat-number">4 in 5</span>
-          <span class="stat-label">Custody outcomes</span>
-          <h3>Children of separated parents end up in their mother's primary care.</h3>
-          <p>The dad who walks in prepared is the dad who shapes a better outcome — without the grievance.</p>
-          <cite class="stat-source">U.S. Census, via Texas family-law statistics</cite>
+        <div class="stat-card" id="stat-primary-custody">
+          <span class="stat-number">1 in 5</span>
+          <span class="stat-label">Primary custody</span>
+          <h3>Of custodial parents are fathers.</h3>
+          <p>Roughly 20% of custodial parents are fathers. Texas mirrors the national average. Dads receive about 33% of parenting time &mdash; 120 days a year versus 245 for moms.</p>
+          <cite class="stat-source">U.S. Census Bureau via Mims Ballew Hollingsworth Texas Law (2026); CustodyXchange State Data</cite>
         </div>
-        <div class="stat-card" id="stat-who-initiates">
-          <span class="stat-number">7 in 10</span>
-          <span class="stat-label">Who initiates</span>
-          <h3>Texas divorces are initiated by the wife.</h3>
-          <p>Most dads enter family court reacting, not prepared. What you've captured, organized, and how you communicate sets the tone of everything that follows.</p>
-          <cite class="stat-source">Texas court statistics</cite>
+        <div class="stat-card" id="stat-monthly-days">
+          <span class="stat-number">6&ndash;8 days</span>
+          <span class="stat-label">Per month</span>
+          <h3>With their kids during the school year.</h3>
+          <p>Under Texas Standard or Expanded Possession, most non-custodial dads get just 6 to 8 days per month during the school year, plus a 30-day summer block and alternating holidays. The reality is closer to one in four days, not one in two.</p>
+          <cite class="stat-source">Texas Family Code &sect; 153.252 (Standard Possession Order); &sect; 153.254 (Expanded SPO)</cite>
         </div>
-        <div class="stat-card" id="stat-hidden-hour">
-          <span class="stat-number">$300&ndash;$500</span>
-          <span class="stat-label">The hidden hour</span>
-          <h3>Per hour — what most attorneys charge to organize what you can organize yourself.</h3>
-          <p>The dads who bring their lawyer a packet — not a pile — save thousands. We teach the framework.</p>
-          <cite class="stat-source">Industry data: Clio Legal Trends Report, ABA fee surveys</cite>
+        <div class="stat-card" id="stat-income-loss">
+          <span class="stat-number">Up to 40%</span>
+          <span class="stat-label">Income loss</span>
+          <h3>For men in their 30s the year after divorce.</h3>
+          <p>Men in their 30s lose close to 40% of their income in the year after divorce, versus 9% for women. Across all ages, dads' household income drops 23&ndash;25% post-divorce.</p>
+          <cite class="stat-source">Federal Reserve Bank of St. Louis (2024); U.S. GAO</cite>
+        </div>
+        <div class="stat-card" id="stat-hearing-cost">
+          <span class="stat-number">$5K&ndash;$25K</span>
+          <span class="stat-label">Per routine hearing</span>
+          <h3>In legal fees for a single Texas family-court hearing.</h3>
+          <p>A single routine hearing in Texas family court typically runs $5,000 to $25,000 in legal fees. That is not the final trial. That does not include mediation, social studies, custody evaluations, or expert witnesses. Most contested cases have several hearings before trial.</p>
+          <cite class="stat-source">Texas family law firm fee disclosures; ABA fee surveys; Clio Legal Trends Report</cite>
+        </div>
+        <div class="stat-card" id="stat-billing-increments">
+          <span class="stat-number">$75&ndash;$125</span>
+          <span class="stat-label">One-word reply</span>
+          <h3>What a one-word "yes" to an email costs.</h3>
+          <p>Family law attorneys bill in 15-minute increments at $300&ndash;$500 per hour. A one-word "yes" to an email costs $75 to $125. Dads who bring their lawyer a packet &mdash; not a pile &mdash; save thousands.</p>
+          <cite class="stat-source">Clio Legal Trends Report; ABA fee surveys</cite>
+        </div>
+        <div class="stat-card" id="stat-mental-health">
+          <span class="stat-number">Nearly 3x</span>
+          <span class="stat-label">Mental health</span>
+          <h3>Greater odds of dying by suicide for divorced men.</h3>
+          <p>Divorced men have 2.82x greater odds of dying by suicide than married men. For separated men under 34, the odds are eight times higher. Knowledge, preparation, and community change outcomes.</p>
+          <cite class="stat-source">Psychological Bulletin (2025 meta-analysis, 106M+ men); Orygen Research</cite>
         </div>
       </div>
     </div>
