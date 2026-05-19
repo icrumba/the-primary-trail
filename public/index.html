@@ -55,7 +55,7 @@
     "@type": "WebSite",
     "name": "The Primary Trail",
     "url": "https://theprimarytrail.com",
-    "dateModified": "2026-05-17"
+    "dateModified": "2026-05-18"
   }
   </script>
 
@@ -325,6 +325,25 @@
       font-weight: 500;
     }
     .form-success.visible { display: block; }
+
+    /* GHL waitlist form embed */
+    .waitlist-embed {
+      max-width: 480px;
+      margin: 0 0 1rem;
+    }
+    .waitlist-embed iframe {
+      width: 100%;
+      min-height: 220px;
+      border: none;
+      background: transparent;
+      display: block;
+    }
+    .waitlist-embed .tiny {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--tpt-warm-gray);
+      margin-top: 0.5rem;
+    }
 
     /* QUICK ANSWER (AEO) */
     section.qa {
@@ -890,19 +909,23 @@
         <h1>For the dad who wants to walk in prepared.</h1>
         <p class="lead">The dad who walks in prepared, organized, and steady shapes the story his kids need told.</p>
 
-        <!-- WAITLIST FORM
-             TODO (Victor / GHL): Replace this entire <form> with your GoHighLevel
-             form embed (iframe or script) once GHL Form 1 is built. Keep
-             the .waitlist class on the wrapper so styling carries over.
-             Recommended GHL setup: single-field email capture, tag tpt-waitlist,
-             welcome workflow that delivers the "First 7 Things to Do" checklist.
-             See ghl/forms.md Form 1 spec. -->
-        <form class="waitlist" id="waitlist-hero" aria-label="Join the waitlist">
-          <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-          <button type="submit" class="btn-primary">Join the waitlist</button>
-          <span class="tiny">Get the free "First 7 Things to Do" checklist when you join.</span>
-        </form>
-        <div class="form-success" id="success-hero" role="status">Thanks. We'll be in touch with the free checklist and waitlist updates.</div>
+        <!-- WAITLIST FORM — GHL embed (TPT — Waitlist, form ID KHUqZ6bBPmihIiP9j9vS) -->
+        <div class="waitlist-embed">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/KHUqZ6bBPmihIiP9j9vS"
+            id="inline-KHUqZ6bBPmihIiP9j9vS-hero"
+            data-layout='{"id":"INLINE"}'
+            data-trigger-type="alwaysShow"
+            data-activation-type="alwaysActivated"
+            data-deactivation-type="neverDeactivate"
+            data-form-name="TPT - Waitlist"
+            data-height="auto"
+            data-layout-iframe-id="inline-KHUqZ6bBPmihIiP9j9vS-hero"
+            data-form-id="KHUqZ6bBPmihIiP9j9vS"
+            title="Join the TPT waitlist"
+            loading="lazy"></iframe>
+          <p class="tiny">Join the waitlist for early access when we open.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1139,15 +1162,24 @@
     <div class="container">
       <div class="narrow">
         <h2>Step onto the trail.</h2>
-        <p>Join the waitlist and we'll send the free "First 7 Things to Do" checklist plus founding access when the full program opens.</p>
+        <p>Join the waitlist for founding-member access when the program opens. We won't share your address.</p>
 
-        <!-- WAITLIST FORM (mirror) — same TODO as hero form: replace with GHL embed when ready. -->
-        <form class="waitlist" id="waitlist-bottom" aria-label="Join the waitlist">
-          <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-          <button type="submit" class="btn-primary">Join the waitlist</button>
-          <span class="tiny">Free checklist included. We won't share your address.</span>
-        </form>
-        <div class="form-success" id="success-bottom" role="status">Thanks. We'll be in touch with the free checklist and waitlist updates.</div>
+        <!-- WAITLIST FORM (mirror) — GHL embed (TPT — Waitlist, form ID KHUqZ6bBPmihIiP9j9vS) -->
+        <div class="waitlist-embed">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/KHUqZ6bBPmihIiP9j9vS"
+            id="inline-KHUqZ6bBPmihIiP9j9vS-cta"
+            data-layout='{"id":"INLINE"}'
+            data-trigger-type="alwaysShow"
+            data-activation-type="alwaysActivated"
+            data-deactivation-type="neverDeactivate"
+            data-form-name="TPT - Waitlist"
+            data-height="auto"
+            data-layout-iframe-id="inline-KHUqZ6bBPmihIiP9j9vS-cta"
+            data-form-id="KHUqZ6bBPmihIiP9j9vS"
+            title="Join the TPT waitlist"
+            loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -1156,27 +1188,13 @@
   <footer>
     <div class="container">
       <p class="disclaimer">The Primary Trail provides coaching and educational services only. We are not lawyers and do not provide legal advice. Information shared is for educational purposes and is not a substitute for the advice of a licensed attorney in your jurisdiction. Outcomes vary; we make no guarantees about case results. By joining the waitlist you consent to receive email from The Primary Trail; you can unsubscribe at any time.</p>
-      <p class="updated">Last updated: May 17, 2026</p>
+      <p class="updated">Last updated: May 18, 2026</p>
       <p class="tiny">© 2026 The Primary Trail. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    // Lightweight form interception. Replace with GHL form embed when ready.
-    function wireForm(formId, successId) {
-      var form = document.getElementById(formId);
-      var success = document.getElementById(successId);
-      if (!form) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        // No PII storage. No analytics ping. The GHL embed will replace this entire flow.
-        form.style.display = 'none';
-        success.classList.add('visible');
-      });
-    }
-    wireForm('waitlist-hero', 'success-hero');
-    wireForm('waitlist-bottom', 'success-bottom');
-  </script>
+  <!-- GHL form embed script — handles iframe auto-resize for the TPT — Waitlist forms -->
+  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
 
 </body>
 </html>
