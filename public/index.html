@@ -459,6 +459,113 @@
       color: rgba(251, 248, 241, 0.92);
     }
 
+    /* STATS — replaces the pillars section on the public homepage 2026-05-18.
+       Reuses the pine-forest glass-overlay treatment to keep the section
+       visually anchored where pillars used to be. */
+    section.stats {
+      position: relative;
+      background-image: url('/assets/images/pillars-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 1.5rem;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    section.stats::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(31, 63, 46, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: -1;
+    }
+    section.stats .eyebrow { color: rgba(251, 248, 241, 0.85); }
+    section.stats h2 {
+      margin-bottom: 0.5rem;
+      color: var(--tpt-warm-white);
+    }
+    section.stats > .container > .narrow > p {
+      color: rgba(251, 248, 241, 0.88);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 2rem auto 0;
+    }
+    @media (max-width: 900px) {
+      .stat-grid { grid-template-columns: 1fr; }
+    }
+    .stat-card {
+      padding: 2rem 1.75rem;
+      background: var(--tpt-warm-white);
+      border: 1px solid var(--tpt-line);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(31, 63, 46, 0.12);
+    }
+    .stat-number {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--tpt-amber);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--tpt-line);
+    }
+    .stat-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: var(--tpt-green);
+      line-height: 1.3;
+    }
+    .stat-card p {
+      color: var(--tpt-warm-gray);
+      font-size: 0.95rem;
+      flex-grow: 1;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .stat-source {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-style: italic;
+      color: var(--tpt-warm-gray);
+      margin-top: auto;
+      letter-spacing: 0.02em;
+    }
+    /* On small screens, drop the glass-blur for perf — same pattern as pillars */
+    @media (max-width: 768px) {
+      section.stats::before {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(31, 63, 46, 0.88);
+      }
+    }
+
     /* SAVINGS PULL-QUOTE */
     section.savings {
       padding: 4rem 0;
@@ -994,38 +1101,37 @@
     </div>
   </section>
 
-  <!-- PILLARS -->
-  <section class="pillars">
+  <!-- STATS — replaced PILLARS section 2026-05-18 per Victor's original sales-page direction.
+       Pillars remain the internal product spine (CLAUDE.md #5) but are no longer the public visual signature.
+       See: ghl/ for the customer-facing framework taught; SOUL.md update pending. -->
+  <section class="stats">
     <div class="container">
       <div class="narrow">
-        <span class="eyebrow">THE FRAMEWORK</span>
-        <h2>The four pillars: <span class="heading-accent">Capture, Organize, Reflect, Execute.</span></h2>
-        <p>Every part of the program maps to one of four pillars. They're how dads stop bleeding money and start walking the trail with a plan.</p>
+        <span class="eyebrow">WHAT MOST DADS DON'T KNOW</span>
+        <h2>The reality, by the numbers. <span class="heading-accent">Walk in with eyes open.</span></h2>
+        <p>The system isn't built for the dad who walks in reacting. It rewards the dad who walks in prepared.</p>
       </div>
-      <div class="pillar-grid">
-        <div class="pillar">
-          <span class="pillar-number">01</span>
-          <span class="pillar-label">CAPTURE</span>
-          <h3>Get it all in one place</h3>
-          <p>Every email, text, voicemail, photo, screenshot, and date. Captured, timestamped, and organized. Most dads lose thousands of dollars right here, by failing to capture what they should have.</p>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-number">4 in 5</span>
+          <span class="stat-label">Custody outcomes</span>
+          <h3>Children of separated parents end up in their mother's primary care.</h3>
+          <p>The dad who walks in prepared is the dad who shapes a better outcome — without the grievance.</p>
+          <cite class="stat-source">U.S. Census, via Texas family-law statistics</cite>
         </div>
-        <div class="pillar">
-          <span class="pillar-number">02</span>
-          <span class="pillar-label">ORGANIZE</span>
-          <h3>Build the timeline</h3>
-          <p>Turn the pile into a timeline, themes, and evidence categories your lawyer can actually use. Lawyers charge $300 to $500 an hour to do this. We teach you to bring it pre-organized.</p>
+        <div class="stat-card">
+          <span class="stat-number">7 in 10</span>
+          <span class="stat-label">Who initiates</span>
+          <h3>Texas divorces are initiated by the wife.</h3>
+          <p>Most dads enter family court reacting, not prepared. What you've captured, organized, and how you communicate sets the tone of everything that follows.</p>
+          <cite class="stat-source">Texas court statistics</cite>
         </div>
-        <div class="pillar">
-          <span class="pillar-number">03</span>
-          <span class="pillar-label">REFLECT</span>
-          <h3>Stay grounded. Watch your tone.</h3>
-          <p>The judgment layer. AI-assisted help to stay grounded, check your tone before you hit send, and spot patterns. Stop torpedoing your own case in the heat of the moment.</p>
-        </div>
-        <div class="pillar pillar-execute">
-          <span class="pillar-number">04</span>
-          <span class="pillar-label">EXECUTE</span>
-          <h3>Hand it off, prepared</h3>
-          <p>Package the case for your lawyer, or where allowed, for direct filing. Tighter case. Less time billed. A better outcome for the kids.</p>
+        <div class="stat-card">
+          <span class="stat-number">$300&ndash;$500</span>
+          <span class="stat-label">The hidden hour</span>
+          <h3>Per hour — what most attorneys charge to organize what you can organize yourself.</h3>
+          <p>The dads who bring their lawyer a packet — not a pile — save thousands. We teach the framework.</p>
+          <cite class="stat-source">Industry data: Clio Legal Trends Report, ABA fee surveys</cite>
         </div>
       </div>
     </div>
