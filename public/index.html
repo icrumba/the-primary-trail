@@ -1134,8 +1134,54 @@
       border-radius: 50%;
       background: var(--tpt-amber);
     }
-    .tier .btn-tier {
+    /* tier-includes-header (renamed from .tier-includes-label per Cowork CTA spec v2) */
+    .tier-includes-header {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .tier.tier-featured .tier-includes-header {
+      color: rgba(251, 248, 241, 0.92);
+    }
+
+    /* Spacer/note line under INCLUDES header — empty in Gold/Platinum, carries
+       "Everything in Platinum, plus:" in Diamond. min-height keeps card geometry symmetrical. */
+    .tier-includes-note {
+      min-height: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--tpt-warm-gray);
+      font-style: italic;
+      margin: 0 0 0.5rem;
+      line-height: 1.25rem;
+    }
+    .tier.tier-featured .tier-includes-note {
+      color: rgba(251, 248, 241, 0.85);
+    }
+
+    /* Diamond-only footnote (Coordination with your attorney line) — italic, muted, separator above. */
+    .tier-footnote {
+      font-size: 0.78rem;
+      color: var(--tpt-warm-gray);
+      margin: 0.75rem 0 0;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--tpt-line);
+      line-height: 1.5;
+    }
+
+    /* CTA group wraps primary + secondary; pins to card bottom via margin-top: auto. */
+    .tier-cta-group {
       margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: stretch;
+    }
+    .tier .btn-tier {
       display: inline-block;
       text-align: center;
       padding: 0.95rem 1.5rem;
@@ -1156,6 +1202,67 @@
     .tier.tier-featured .btn-tier:hover {
       background: var(--tpt-warm-white);
       color: var(--tpt-green);
+    }
+    .btn-tier-secondary {
+      display: block;
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--tpt-green);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      padding: 0.5rem 0 0;
+      transition: color 0.15s;
+    }
+    .btn-tier-secondary:hover {
+      color: var(--tpt-amber);
+    }
+    .tier.tier-featured .btn-tier-secondary {
+      color: rgba(251, 248, 241, 0.92);
+    }
+    .tier.tier-featured .btn-tier-secondary:hover {
+      color: var(--tpt-amber);
+    }
+
+    /* Hero caption — muted line under the hero CTA pair. */
+    .hero-caption {
+      font-size: 0.85rem;
+      color: var(--tpt-warm-gray);
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* Educational CTA band — low-stakes path between stats and savings/tiers. */
+    section.framework-band {
+      padding: 2.5rem 0;
+      background: var(--tpt-cream-warm);
+      border-top: 1px solid var(--tpt-line);
+      border-bottom: 1px solid var(--tpt-line);
+    }
+    .framework-band .container {
+      text-align: center;
+    }
+    .framework-band p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--tpt-green);
+      max-width: 720px;
+      margin: 0 auto 0.75rem;
+      font-style: italic;
+      line-height: 1.45;
+    }
+    .framework-band .framework-link {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--tpt-green);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .framework-band .framework-link:hover {
+      color: var(--tpt-amber);
     }
   </style>
 </head>
@@ -1181,13 +1288,12 @@
         <h1>For the dad who wants to walk in prepared.</h1>
         <p class="lead">The dad who walks in prepared, organized, and steady shapes the story his kids need told.</p>
 
-        <!-- HERO CTA — button anchors to the single form at the bottom (CTA band).
-             Pattern: one form on the page, multiple buttons throughout pointing to it.
-             Matches the tier-card "Join the waitlist" buttons for consistency. -->
+        <!-- HERO CTA — primary + secondary pair. Primary -> single form at bottom. Secondary -> framework anchor. -->
         <div class="hero-cta-row">
-          <a href="#waitlist-cta" class="btn-primary">Join the waitlist</a>
-          <span class="or">founding-member access when we open</span>
+          <a href="#waitlist-cta" class="btn-primary" data-cta="hero-primary-waitlist">Join the waitlist</a>
+          <a href="#framework" class="btn-secondary" data-cta="hero-secondary-framework">See the four-pillar framework</a>
         </div>
+        <p class="tiny hero-caption">Founding-member access and pricing when we open.</p>
       </div>
     </div>
   </section>
@@ -1239,8 +1345,9 @@
     </div>
   </section>
 
-  <!-- QUICK ANSWER -->
-  <section class="qa">
+  <!-- QUICK ANSWER — also serves as the #framework anchor target for hero secondary + educational band CTAs.
+       The four-pillar framework (Capture/Organize/Reflect/Execute) is summarized in the body copy below. -->
+  <section class="qa" id="framework">
     <div class="container">
       <div class="narrow">
         <p>The Primary Trail is a coaching and education service for dads new to family court. We don't give legal advice. We teach you how to capture what matters, organize it cleanly, communicate without hurting your case, and bring your lawyer the kind of preparation most dads only learn the hard way. The result: thousands of dollars saved, a credible record, and a clearer path through.</p>
@@ -1316,6 +1423,15 @@
     </div>
   </section>
 
+  <!-- EDUCATIONAL CTA BAND — low-stakes "research mode" path between stats (heavy) and the savings quote.
+       Third path in the funnel: not-ready-to-talk dads get a reading destination instead of a button. -->
+  <section class="framework-band">
+    <div class="container">
+      <p>Not ready to talk to anyone yet? Read the framework. Capture, Organize, Reflect, Execute &mdash; the four pillars dads use to walk in prepared.</p>
+      <a href="#framework" class="framework-link" data-cta="framework-band-link">Read the framework &rarr;</a>
+    </div>
+  </section>
+
   <!-- SAVINGS PULL-QUOTE -->
   <section class="savings">
     <div class="container">
@@ -1342,53 +1458,69 @@
             <span class="tier-price">$175</span><span class="tier-price-unit">/hr</span>
           </div>
           <p class="tier-bestfor">For dads who need flexible, on-demand support for specific questions, document reviews, or short-term challenges.</p>
-          <span class="tier-includes-label">Includes</span>
+          <h4 class="tier-includes-header">Includes</h4>
+          <p class="tier-includes-note">&nbsp;</p>
           <ul>
             <li>Ad-hoc consultation via secure phone or Zoom</li>
             <li>Email support between sessions (typically within 1 business day)</li>
-            <li>Document review or preparation support (30 minutes)</li>
-            <li>Strategic preparation for immediate challenges and decisions</li>
+            <li>Document review or preparation support (30 minutes per session)</li>
+            <li>Strategic preparation for immediate decisions and challenges</li>
             <li>Practical resources, templates, and checklists</li>
+            <li>Message-tone review before high-stakes communication with your ex or attorney</li>
+            <li>Pre-call agenda so every billable minute is used on what moves your case</li>
           </ul>
-          <a href="#waitlist-cta" class="btn-tier">Join the waitlist</a>
+          <div class="tier-cta-group">
+            <!-- TODO: replace #waitlist-cta on secondary with GHL Calendar 1 URL when the strategy-call calendar is built -->
+            <a href="#waitlist-cta" class="btn-tier" data-cta="tier-gold-primary">Get on the list</a>
+            <a href="#waitlist-cta" class="btn-tier-secondary" data-cta="tier-gold-secondary-strategy-call">Book a free 15-min strategy call &rarr;</a>
+          </div>
         </div>
         <div class="tier tier-featured">
           <span class="tier-name">Platinum</span>
-          <span class="tier-tagline">Monthly coaching partnership for dads in family court</span>
+          <span class="tier-tagline">Monthly partnership for dads in family court</span>
           <div>
             <span class="tier-price">$700</span><span class="tier-price-unit">/mo</span>
           </div>
           <p class="tier-bestfor">For dads who want consistent, proactive support and a true partner over the months ahead.</p>
-          <span class="tier-includes-label">Includes</span>
+          <h4 class="tier-includes-header">Includes</h4>
+          <p class="tier-includes-note">&nbsp;</p>
           <ul>
-            <li>One 60-minute strategy session weekly (via Zoom)</li>
+            <li>One 60-minute strategy session weekly via Zoom</li>
             <li>Priority email support (typically within 1 business day)</li>
             <li>Ongoing review of documents, timelines, and case developments</li>
             <li>Preparation for parenting facilitation or mediation</li>
             <li>Guidance on assembling and organizing information for your attorney</li>
             <li>One Parent Facilitator / Custody Evaluator mock session per month</li>
+            <li>Message-tone review before high-stakes communication</li>
           </ul>
-          <a href="#waitlist-cta" class="btn-tier">Join the waitlist</a>
+          <div class="tier-cta-group">
+            <a href="#waitlist-cta" class="btn-tier" data-cta="tier-platinum-primary">Apply for Platinum</a>
+            <a href="#waitlist-cta" class="btn-tier-secondary" data-cta="tier-platinum-secondary-strategy-call">Book a free 15-min strategy call &rarr;</a>
+          </div>
         </div>
         <div class="tier">
           <span class="tier-name">Diamond</span>
-          <span class="tier-tagline">Full-service in-person coaching for Dallas-area dads</span>
+          <span class="tier-tagline">In-person + virtual coaching, Dallas dads</span>
           <div>
             <span class="tier-price">$1,200</span><span class="tier-price-unit">/mo</span>
           </div>
           <p class="tier-bestfor">For Dallas / Collin County dads who want comprehensive, hands-on support and in-person preparation for the moments that matter.</p>
-          <span class="tier-includes-label">Includes everything in Platinum, plus</span>
+          <h4 class="tier-includes-header">Includes</h4>
+          <p class="tier-includes-note">Everything in Platinum, plus:</p>
           <ul>
             <li>One 90-minute in-person strategy session per month (Dallas / Collin County)</li>
             <li>Two additional 60-minute virtual sessions per month</li>
             <li>Comprehensive case strategy and roadmap development</li>
-            <li>Deep-dive preparation for parenting facilitations, mediations, and evaluations</li>
+            <li>Deep-dive prep for parenting facilitations, mediations, and evaluations</li>
             <li>Two Parent Facilitator / Custody Evaluator mock sessions per month</li>
             <li>Fast response on time-sensitive issues (typically within 24 hours)</li>
-            <li>Coordination with your attorney (operational, not legal — if desired)</li>
             <li>Optional attendance at select in-person meetings (mediation; facilitation and evaluations where permitted)</li>
           </ul>
-          <a href="#waitlist-cta" class="btn-tier">Join the waitlist</a>
+          <p class="tier-footnote"><em>Coordination with your attorney (operational, not legal &mdash; if desired) available throughout.</em></p>
+          <div class="tier-cta-group">
+            <a href="#waitlist-cta" class="btn-tier" data-cta="tier-diamond-primary">Request founding access</a>
+            <a href="#waitlist-cta" class="btn-tier-secondary" data-cta="tier-diamond-secondary-strategy-call">Book a free 15-min strategy call &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
