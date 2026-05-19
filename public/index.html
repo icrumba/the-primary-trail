@@ -1273,6 +1273,53 @@
     .framework-band .framework-link:hover {
       color: var(--tpt-amber);
     }
+
+    /* Coming-soon band — bridge between stats / who-this-is-for and FAQ.
+       Calm palette, centered, no prices. Primary action: register interest. */
+    section.coming-soon-band {
+      padding: 5rem 0 4rem;
+      background: var(--tpt-cream-warm);
+      text-align: center;
+    }
+    .coming-soon-band .eyebrow {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+    .coming-soon-band h2 {
+      max-width: 24ch;
+      margin: 0 auto 1rem;
+    }
+    .coming-soon-band .subhead {
+      max-width: 56ch;
+      margin: 0 auto 2rem;
+      color: var(--tpt-warm-gray);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+    .coming-soon-band .btn-primary {
+      display: inline-block;
+    }
+
+    /* 988 support resource line — small, muted, centered. Sits inside the
+       dark stats section directly below the grid so it pairs with stat 6. */
+    .support-resource {
+      max-width: 60ch;
+      margin: 2.5rem auto 0;
+      padding: 0 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(251, 248, 241, 0.78);
+      line-height: 1.55;
+    }
+    .support-resource a {
+      color: var(--tpt-warm-white);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+    .support-resource a:hover {
+      color: var(--tpt-amber);
+    }
   </style>
 </head>
 <body>
@@ -1450,6 +1497,17 @@
         <p>Family court evaluates one thing above all else: what's best for the children. Our entire framework is built around helping you become the most effective advocate for that, in the eyes of the court that's actually watching.</p>
         <p class="emphasis">If you've just been served, or you can see the storm coming, or you're staring at custody papers at 11pm wondering where to start, this is for you.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- COMING SOON BAND — bridge between qualifier sections and FAQ.
+       Single CTA: register interest. No prices visible on the homepage. -->
+  <section id="coming-soon" class="coming-soon-band">
+    <div class="container">
+      <span class="eyebrow">COMING SOON</span>
+      <h2>1:1 coaching opens with founding-member pricing.</h2>
+      <p class="subhead">People who register their interest get first access and the lowest pricing we will ever offer. We open to founding members first, in waves.</p>
+      <a class="btn-primary" data-cta="coming-soon-waitlist" href="#waitlist-cta">Register your interest</a>
     </div>
   </section>
 
