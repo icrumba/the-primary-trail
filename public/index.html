@@ -249,7 +249,7 @@
     /* Scroll-margin so anchor targets land with breathing room above the H2,
        not flush with the viewport top. Used by #waitlist-cta and #framework. */
     :target { scroll-margin-top: 24px; }
-    #waitlist-cta, #framework { scroll-margin-top: 24px; }
+    #waitlist-cta, #framework, #faq, #sources, #coming-soon { scroll-margin-top: 24px; }
     body {
       font-family: var(--font-sans);
       color: var(--tpt-charcoal);
@@ -1382,13 +1382,13 @@
           <p>The will to win is not nearly so important as the will to prepare to win.</p>
           <cite>— Vince Lombardi</cite>
         </blockquote>
-        <h1>For the dad who wants to walk in prepared.</h1>
-        <p class="lead">The dad who walks in prepared, organized, and steady shapes the story his kids need told.</p>
+        <h1>For the dad who wants to be prepared.</h1>
+        <p class="lead">The dad who shows up prepared, organized, and steady &mdash; and speaks the truth of his case clearly &mdash; gives his kids the present father they need.</p>
 
-        <!-- HERO CTA — primary + secondary pair. Primary -> single form at bottom. Secondary -> framework anchor. -->
+        <!-- HERO CTA — primary -> single form at bottom. Secondary -> FAQ anchor (KEPT per Victor's pick). -->
         <div class="hero-cta-row">
           <a href="#waitlist-cta" class="btn-primary" data-cta="hero-primary-waitlist">Join the waitlist</a>
-          <a href="#framework" class="btn-secondary" data-cta="hero-secondary-framework">See the four-pillar framework</a>
+          <a href="#faq" class="btn-secondary" data-cta="hero-secondary-faq">Read what dads ask</a>
         </div>
         <p class="tiny hero-caption">Founding-member access and pricing when we open.</p>
       </div>
@@ -1558,7 +1558,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="faq">
+  <section class="faq" id="faq">
     <div class="container">
       <div class="narrow">
         <span class="eyebrow">QUESTIONS</span>
