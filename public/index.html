@@ -1300,6 +1300,47 @@
       display: inline-block;
     }
 
+    /* Sources & methodology section — quiet citation list above footer.
+       Visited by AI crawlers and serious readers; deliberately understated. */
+    section.sources {
+      padding: 5rem 0 4rem;
+      background: var(--tpt-cream);
+      border-top: 1px solid var(--tpt-line);
+    }
+    section.sources .eyebrow { color: var(--tpt-warm-gray); }
+    section.sources h2 {
+      margin-bottom: 0.75rem;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+    }
+    .sources-intro {
+      color: var(--tpt-warm-gray);
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+    .sources-list dt {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--tpt-green);
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .sources-list dt:first-child { margin-top: 0; }
+    .sources-list dd {
+      font-size: 0.9rem;
+      color: var(--tpt-warm-gray);
+      line-height: 1.65;
+      margin: 0 0 0.5rem 0;
+    }
+    .sources-link-placeholder {
+      display: inline-block;
+      font-style: italic;
+      color: var(--tpt-amber);
+      font-size: 0.82rem;
+      margin-top: 0.25rem;
+    }
+
     /* 988 support resource line — small, muted, centered. Sits inside the
        dark stats section directly below the grid so it pairs with stat 6. */
     .support-resource {
@@ -1574,6 +1615,66 @@
             title="Join the TPT waitlist"
             loading="lazy"></iframe>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES & METHODOLOGY — citations for the 6 stat cards.
+       TODO (Victor): replace each [paste exact URL] placeholder with the canonical
+       source URL before public launch. -->
+  <section id="sources" class="sources">
+    <div class="container">
+      <div class="narrow">
+        <span class="eyebrow">SOURCES &amp; METHODOLOGY</span>
+        <h2>Where the numbers come from.</h2>
+        <p class="sources-intro">Each stat above is sourced. If you want to verify the underlying research before sharing the page or quoting a figure, the citations are below.</p>
+
+        <dl class="sources-list">
+          <dt>Primary custody (1 in 5)</dt>
+          <dd>
+            U.S. Census Bureau (Custodial Mothers and Fathers reports).<br>
+            Mims Ballew Hollingsworth Texas Law summary (2026).<br>
+            CustodyXchange State Data.<br>
+            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
+          </dd>
+
+          <dt>Days per month (6&ndash;8)</dt>
+          <dd>
+            Texas Family Code &sect; 153.252 (Standard Possession Order).<br>
+            Texas Family Code &sect; 153.254 (Expanded SPO).<br>
+            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
+          </dd>
+
+          <dt>Income loss (Up to 40%)</dt>
+          <dd>
+            Federal Reserve Bank of St. Louis (Feb 2024).<br>
+            U.S. Government Accountability Office post-divorce income study.<br>
+            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
+          </dd>
+
+          <dt>Per routine hearing ($5K&ndash;$25K)</dt>
+          <dd>
+            Texas family law firm fee disclosures.<br>
+            ABA fee surveys.<br>
+            Clio Legal Trends Report.<br>
+            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
+          </dd>
+
+          <dt>One-word reply ($75&ndash;$125)</dt>
+          <dd>
+            Clio Legal Trends Report.<br>
+            ABA fee surveys.<br>
+            Texas State Bar fee survey.<br>
+            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
+          </dd>
+
+          <dt>Mental health (Nearly 3x)</dt>
+          <dd>
+            <em>Psychological Bulletin</em>, 2025 meta-analysis of 106 million men across 75 studies.<br>
+            Orygen Research / Michael Wilson study (2025).<br>
+            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
+          </dd>
+        </dl>
       </div>
     </div>
   </section>
