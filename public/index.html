@@ -1233,6 +1233,25 @@
       letter-spacing: 0.02em;
     }
 
+    /* CTA band branded button row — visual anchor above the iframe form so the
+       bottom CTA section reads as a clear action even if the iframe styling is muted. */
+    .cta-band-button-row {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin: 0 0 1.5rem;
+    }
+    .cta-band-button-row .btn-primary {
+      align-self: flex-start;
+    }
+    .cta-band-hint {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.04em;
+    }
+
     /* Educational CTA band — low-stakes path between stats and savings/tiers. */
     section.framework-band {
       padding: 2.5rem 0;
@@ -1581,8 +1600,15 @@
         <h2>Step onto the trail.</h2>
         <p>Join the waitlist for founding-member access when the program opens. We won't share your address.</p>
 
+        <!-- Branded button above the form — visual anchor so the section reads as a clear CTA
+             even if the GHL iframe styling reads as muted. Anchors directly to the form below. -->
+        <div class="cta-band-button-row">
+          <a href="#waitlist-form" class="btn-primary" data-cta="cta-band-primary">Join the waitlist</a>
+          <span class="cta-band-hint">&darr; Enter your email below</span>
+        </div>
+
         <!-- WAITLIST FORM (mirror) — GHL embed (TPT — Waitlist, form ID KHUqZ6bBPmihIiP9j9vS) -->
-        <div class="waitlist-embed">
+        <div class="waitlist-embed" id="waitlist-form">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/KHUqZ6bBPmihIiP9j9vS"
             id="inline-KHUqZ6bBPmihIiP9j9vS-cta"
