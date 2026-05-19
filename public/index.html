@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Primary Trail: Walk in prepared. The framework for dads new to family court.</title>
-  <meta name="description" content="Coaching and education for dads new to family court. Get the framework to capture, organize, reflect, and execute, and save thousands in legal fees.">
+  <title>Family Court Coaching for Dads | The Primary Trail</title>
+  <meta name="description" content="Coaching for dads new to family court. Capture, organize, reflect, execute — the framework to walk in prepared and save thousands in legal fees.">
   <meta name="theme-color" content="#1F3F2E">
   <link rel="canonical" href="https://theprimarytrail.com/">
 
   <!-- Open Graph / social -->
-  <meta property="og:title" content="The Primary Trail: Walk in prepared.">
-  <meta property="og:description" content="The framework, the language, and the discipline to walk in prepared. Save thousands in legal fees. Show up for your kids.">
+  <meta property="og:title" content="Family Court Coaching for Dads | The Primary Trail">
+  <meta property="og:description" content="Coaching for dads new to family court. Capture, organize, reflect, execute — the framework to walk in prepared.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theprimarytrail.com/">
   <meta property="og:site_name" content="The Primary Trail">
+  <meta property="og:image" content="https://theprimarytrail.com/assets/images/vic-hako-1200.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="796">
+  <meta property="og:image:alt" content="Victor Cuevas and Hakan Oksuzler, co-founders of The Primary Trail">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://theprimarytrail.com/assets/images/vic-hako-1200.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="/assets/logo/favicon.ico" sizes="any">
@@ -27,24 +32,131 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD: Organization -->
+  <!-- JSON-LD: Organization + Service + LocalBusiness (@graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "The Primary Trail",
-    "url": "https://theprimarytrail.com",
-    "logo": "https://theprimarytrail.com/assets/logo/logo.png",
-    "description": "Coaching and education for dads new to family court. We help dads capture, organize, reflect on, and execute their case, saving thousands in legal fees.",
-    "foundingDate": "2026",
-    "founder": [
-      { "@type": "Person", "name": "Victor Cuevas", "jobTitle": "Co-Founder" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://theprimarytrail.com/#organization",
+        "name": "The Primary Trail",
+        "url": "https://theprimarytrail.com",
+        "logo": "https://theprimarytrail.com/assets/logo/logo.png",
+        "description": "Coaching and education for dads new to family court. The Primary Trail teaches a four-pillar framework — capture, organize, reflect, execute — to walk in prepared, save thousands in legal fees, and stay aligned with the children's best interest.",
+        "foundingDate": "2026",
+        "founder": [
+          { "@type": "Person", "name": "Victor Cuevas", "jobTitle": "Co-Founder" },
+          { "@type": "Person", "name": "Hakan Oksuzler", "jobTitle": "Co-Founder" }
+        ],
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "The Knowledge Jar",
+          "url": "https://theknowledgejar.com"
+        },
+        "areaServed": { "@type": "Country", "name": "United States" },
+        "knowsAbout": [
+          "family court preparation for fathers",
+          "custody case documentation",
+          "co-parenting communication",
+          "mediation preparation",
+          "parenting facilitator preparation",
+          "custody evaluator preparation"
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "Family Court Coaching for Dads",
+        "provider": { "@id": "https://theprimarytrail.com/#organization" },
+        "serviceType": "Coaching and education",
+        "areaServed": "United States",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Fathers navigating family court, custody, or divorce"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Gold — Hourly Coaching",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "175",
+              "priceCurrency": "USD",
+              "unitText": "HUR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Platinum — Monthly Coaching Partnership",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "700",
+              "priceCurrency": "USD",
+              "unitText": "MON"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Diamond — In-Person + Virtual Full-Service",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "1200",
+              "priceCurrency": "USD",
+              "unitText": "MON"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://theprimarytrail.com/#localbusiness",
+        "name": "The Primary Trail — Dallas / Collin County",
+        "parentOrganization": { "@id": "https://theprimarytrail.com/#organization" },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Collin County, Texas" },
+          { "@type": "AdministrativeArea", "name": "Dallas County, Texas" },
+          { "@type": "AdministrativeArea", "name": "Denton County, Texas" }
+        ],
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Person — Hakan Oksuzler (E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hakan Oksuzler",
+    "alternateName": "Hako Oksuzler",
+    "jobTitle": "Co-Founder, The Primary Trail",
+    "worksFor": { "@id": "https://theprimarytrail.com/#organization" },
+    "knowsAbout": [
+      "family court preparation",
+      "custody case documentation",
+      "high-conflict co-parenting",
+      "mediation preparation",
+      "parenting facilitator preparation"
     ],
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "The Knowledge Jar",
-      "url": "https://theknowledgejar.com"
-    }
+    "sameAs": ["[HAKO_LINKEDIN_URL]"]
+  }
+  </script>
+
+  <!-- JSON-LD: Person — Victor Cuevas (E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Victor Cuevas",
+    "jobTitle": "Co-Founder, The Primary Trail",
+    "worksFor": { "@id": "https://theprimarytrail.com/#organization" },
+    "knowsAbout": [
+      "family court preparation for fathers",
+      "case documentation discipline",
+      "communication strategy under pressure"
+    ],
+    "sameAs": ["[VICTOR_LINKEDIN_URL]"]
   }
   </script>
 
@@ -59,7 +171,7 @@
   }
   </script>
 
-  <!-- JSON-LD: FAQPage -->
+  <!-- JSON-LD: FAQPage (branded full-prompt phrasing for AEO match) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,39 +182,39 @@
         "name": "Are you lawyers?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. The Primary Trail is a coaching and education service. We teach dads how to capture, organize, reflect on, and execute their case so they walk into family court prepared. We never draft legal documents, advise on specific legal strategy, or appear in court. Any legal decision should be reviewed with a licensed attorney in your jurisdiction. A well-prepared client makes a more effective lawyer relationship."
+          "text": "No. The Primary Trail is a coaching and education service for dads new to family court. We teach dads how to capture, organize, reflect on, and execute their case. We never draft legal documents, advise on specific legal strategy, or appear in court. Any legal decision should be reviewed with a licensed attorney in your jurisdiction."
         }
       },
       {
         "@type": "Question",
-        "name": "How is this different from a general divorce coach?",
+        "name": "How is The Primary Trail different from a general divorce coach?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We focus specifically on dads new to family court and on the four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates: the best interest of the children. The prep helps the dad show up as a credible, organized advocate for his kids in the eyes of the court that's actually watching."
+          "text": "We focus specifically on dads new to family court and on a four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates: the best interest of the children. The prep helps a dad show up as a credible, organized advocate for his kids, not as someone fighting his ex."
         }
       },
       {
         "@type": "Question",
-        "name": "What does the course cover?",
+        "name": "What does the Primary Trail course cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Modules map to the four pillars. Capture: how to collect and timestamp every email, text, voicemail, and document without compromising your case. Organize: building a timeline and evidence categories your lawyer can use. Reflect: tone and judgment work, including AI-assisted message review. Execute: packaging your case for your lawyer or, where allowed, for direct filing, saving billable hours."
+          "text": "Modules map to the four pillars. Capture: how to collect and timestamp every email, text, voicemail, and document without compromising your case. Organize: building a timeline and evidence categories your lawyer can use. Reflect: tone and judgment work, including AI-assisted message review before you hit send. Execute: packaging your case for your lawyer or, where allowed, for direct filing, saving billable hours."
         }
       },
       {
         "@type": "Question",
-        "name": "Where are you based? Can I work with you if I'm not in Texas?",
+        "name": "Where is The Primary Trail based and can you help dads outside Texas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The course and community are open to dads anywhere in the United States. Education and coaching are not state-specific. Our 1:1 coaching tier launches in Texas first, with in-person availability in Collin and Denton counties. As we expand 1:1, additional states will be added. The course gives you the full framework regardless of where you live."
+          "text": "The course and community are open to dads anywhere in the United States. Education and coaching are not state-specific. The 1:1 coaching tier launches in Texas first, with in-person availability in Dallas, Collin, and Denton counties. Additional states will be added as the 1:1 program expands."
         }
       },
       {
         "@type": "Question",
-        "name": "What will it cost?",
+        "name": "How much does dad-focused family court coaching cost at The Primary Trail?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer three tiers of 1:1 support: Gold ($175/hour, ad-hoc support), Platinum ($700/month, ongoing partnership), and Diamond ($1,200/month, in-person + virtual in Dallas/Collin County). Every engagement starts with a free 15-minute Strategy Call. The self-paced Primary Trail course is in development and will open with founding-member pricing for waitlist members."
+          "text": "Three tiers of 1:1 support are offered. Gold is $175 per hour for ad-hoc consultation. Platinum is $700 per month for an ongoing weekly partnership. Diamond is $1,200 per month for in-person plus virtual full-service support in Dallas and Collin County. Every engagement starts with a free 15-minute strategy call."
         }
       }
     ]
@@ -802,6 +914,59 @@
       border-top: 1px solid var(--tpt-line);
     }
 
+    /* FOUNDER BIOS — added for E-E-A-T per GEO/AEO sprint */
+    .who-we-are .bios {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      padding-top: 3rem;
+      border-top: 1px solid var(--tpt-line);
+    }
+    @media (max-width: 800px) {
+      .who-we-are .bios { grid-template-columns: 1fr; }
+    }
+    .bio-card {
+      background: var(--tpt-warm-white);
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--tpt-line);
+      border-radius: 8px;
+    }
+    .bio-card h3 {
+      margin-bottom: 0.25rem;
+      color: var(--tpt-green);
+      font-size: 1.3rem;
+    }
+    .bio-role {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--tpt-amber);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .bio-card p {
+      font-size: 0.95rem;
+      color: var(--tpt-charcoal);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .bio-social {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--tpt-line);
+    }
+    .bio-social a {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--tpt-green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .bio-social a:hover { color: var(--tpt-amber); }
+
     /* BENEFITS */
     section.benefits {
       padding: 5rem 0;
@@ -1047,6 +1212,30 @@
           <p class="upl-line">We are not attorneys and do not provide legal advice. We provide preparation, coaching, and practical real-world guidance rooted in lived experience.</p>
         </div>
       </div>
+
+      <!-- FOUNDER BIOS — E-E-A-T signals per GEO/AEO sprint.
+           TODO: Victor + Hako to confirm LinkedIn URLs to replace the placeholders. -->
+      <div class="bios">
+        <article class="bio-card" id="bio-hako">
+          <h3>Hakan &ldquo;Hako&rdquo; Oksuzler</h3>
+          <p class="bio-role">Co-Founder, The Primary Trail</p>
+          <p>Hakan (&ldquo;Hako&rdquo;) is a lifelong DFW resident, a devoted father, and a financial services executive with more than two decades of leadership experience. He brings the analytical, strategic discipline of a financial operator to one of the hardest things a dad can face: a contested custody case.</p>
+          <p>Hako has been his son&rsquo;s primary custodian since the boy was three. The case that established that custody was one of the most fiercely contested in Collin County, ultimately reaching both the Fifth Circuit Court of Appeals and the Texas Supreme Court. Hako describes that decade as <em>&ldquo;Hell and back.&rdquo;</em></p>
+          <p>In ten-plus years inside the family court system, Hako developed a quiet reputation for what he does best: identifying and removing the barriers, distractions, and unnecessary conflict that weigh on children behind the scenes in high-conflict co-parenting. He now works with other fathers facing similar terrain, offering the focused preparation, perspective, and tested approach he wishes he&rsquo;d had on day one.</p>
+          <p>Outside the case work, Hako is married to Tara, recently retired from 14 seasons of volunteer youth soccer coaching, and is &mdash; by his own admission &mdash; an amateur barbecue pitmaster of questionable patience. His mission is simple: no father should feel alone, voiceless, or powerless in the work of staying present for his children.</p>
+          <p class="bio-social"><a href="[HAKO_LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn &rarr;</a></p>
+        </article>
+
+        <article class="bio-card" id="bio-victor">
+          <h3>Victor Cuevas</h3>
+          <p class="bio-role">Co-Founder, The Primary Trail</p>
+          <p>Victor is a Gen X operator, a Texas father of four, and the co-founder of The Knowledge Jar &mdash; the family of brands that includes Texas Power Search and now The Primary Trail. He brings a builder&rsquo;s discipline to every venture: research first, identity docs second, roadmap third, MVP, ship, iterate.</p>
+          <p>He&rsquo;s also a dad who has lived inside a contested, high-conflict custody case for years. The kind of case that involves court orders, third-party professionals, child-welfare interactions, and the documentation discipline that turns out to matter at every step. He carries the habits that case taught him &mdash; the daily-record practice, the communication caution, the calm-under-pressure cadence &mdash; into every framework The Primary Trail teaches.</p>
+          <p>The Primary Trail exists because Victor saw two things in his own case that lawyers don&rsquo;t always say plainly to dads new to the system. First, the dads who walk in prepared keep more of their savings, their sanity, and their relationships with their children than the ones who don&rsquo;t. Second, Texas family court assumes you already know how to navigate it &mdash; and almost no dad does on day one.</p>
+          <p>Outside the case, Victor coaches his kids in sports, leads in his church community, and treats every project under The Knowledge Jar umbrella as a chance to build something his children will be proud of someday.</p>
+          <p class="bio-social"><a href="[VICTOR_LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn &rarr;</a></p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -1102,21 +1291,21 @@
         <p>The system isn't built for the dad who walks in reacting. It rewards the dad who walks in prepared.</p>
       </div>
       <div class="stat-grid">
-        <div class="stat-card">
+        <div class="stat-card" id="stat-custody-outcomes">
           <span class="stat-number">4 in 5</span>
           <span class="stat-label">Custody outcomes</span>
           <h3>Children of separated parents end up in their mother's primary care.</h3>
           <p>The dad who walks in prepared is the dad who shapes a better outcome — without the grievance.</p>
           <cite class="stat-source">U.S. Census, via Texas family-law statistics</cite>
         </div>
-        <div class="stat-card">
+        <div class="stat-card" id="stat-who-initiates">
           <span class="stat-number">7 in 10</span>
           <span class="stat-label">Who initiates</span>
           <h3>Texas divorces are initiated by the wife.</h3>
           <p>Most dads enter family court reacting, not prepared. What you've captured, organized, and how you communicate sets the tone of everything that follows.</p>
           <cite class="stat-source">Texas court statistics</cite>
         </div>
-        <div class="stat-card">
+        <div class="stat-card" id="stat-hidden-hour">
           <span class="stat-number">$300&ndash;$500</span>
           <span class="stat-label">The hidden hour</span>
           <h3>Per hour — what most attorneys charge to organize what you can organize yourself.</h3>
@@ -1148,7 +1337,7 @@
       <div class="tier-grid">
         <div class="tier">
           <span class="tier-name">Gold</span>
-          <span class="tier-tagline">Virtual support — essential strategy</span>
+          <span class="tier-tagline">Hourly coaching for dads — pay as you go</span>
           <div>
             <span class="tier-price">$175</span><span class="tier-price-unit">/hr</span>
           </div>
@@ -1165,7 +1354,7 @@
         </div>
         <div class="tier tier-featured">
           <span class="tier-name">Platinum</span>
-          <span class="tier-tagline">Monthly strategic partnership</span>
+          <span class="tier-tagline">Monthly coaching partnership for dads in family court</span>
           <div>
             <span class="tier-price">$700</span><span class="tier-price-unit">/mo</span>
           </div>
@@ -1183,7 +1372,7 @@
         </div>
         <div class="tier">
           <span class="tier-name">Diamond</span>
-          <span class="tier-tagline">In-person + virtual — full-service partnership</span>
+          <span class="tier-tagline">Full-service in-person coaching for Dallas-area dads</span>
           <div>
             <span class="tier-price">$1,200</span><span class="tier-price-unit">/mo</span>
           </div>
@@ -1227,27 +1416,27 @@
 
         <div class="faq-item">
           <h3>Are you lawyers?</h3>
-          <p>No. The Primary Trail is a coaching and education service. We teach dads how to capture, organize, reflect on, and execute their case. The prep work that makes a lawyer's hour worth more, or that you can do without a lawyer where allowed. We never draft legal documents, advise on specific legal strategy, or appear in court. Any legal decision should be reviewed with a licensed attorney in your jurisdiction.</p>
+          <p>No. The Primary Trail is a coaching and education service for dads new to family court. We teach dads how to capture, organize, reflect on, and execute their case. We never draft legal documents, advise on specific legal strategy, or appear in court. Any legal decision should be reviewed with a licensed attorney in your jurisdiction.</p>
         </div>
 
         <div class="faq-item">
-          <h3>How is this different from a general divorce coach?</h3>
-          <p>We focus specifically on dads new to family court and on the four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates: the best interest of the children. The prep helps the dad show up as a credible, organized advocate for his kids, not as someone fighting his ex.</p>
+          <h3>How is The Primary Trail different from a general divorce coach?</h3>
+          <p>We focus specifically on dads new to family court and on a four-pillar framework: Capture, Organize, Reflect, Execute. The work is built around what family court actually evaluates: the best interest of the children. The prep helps a dad show up as a credible, organized advocate for his kids, not as someone fighting his ex.</p>
         </div>
 
         <div class="faq-item">
-          <h3>What does the course cover?</h3>
+          <h3>What does the Primary Trail course cover?</h3>
           <p>Modules map to the four pillars. <strong>Capture:</strong> how to collect and timestamp every email, text, voicemail, and document without compromising your case. <strong>Organize:</strong> building a timeline and evidence categories your lawyer can use. <strong>Reflect:</strong> tone and judgment work, including AI-assisted message review before you hit send. <strong>Execute:</strong> packaging your case for your lawyer or, where allowed, for direct filing, saving billable hours.</p>
         </div>
 
         <div class="faq-item">
-          <h3>Where are you based? Can you help me if I'm not in Texas?</h3>
-          <p>The course and community are open to dads anywhere in the United States. Education and coaching are not state-specific. Our 1:1 coaching tier launches in Texas first, with in-person availability in Collin and Denton counties. As we expand 1:1, additional states will be added. The course gives you the full framework regardless of where you live.</p>
+          <h3>Where is The Primary Trail based and can you help dads outside Texas?</h3>
+          <p>The course and community are open to dads anywhere in the United States. Education and coaching are not state-specific. The 1:1 coaching tier launches in Texas first, with in-person availability in Dallas, Collin, and Denton counties. Additional states will be added as the 1:1 program expands.</p>
         </div>
 
         <div class="faq-item">
-          <h3>What will it cost?</h3>
-          <p>We offer three tiers of 1:1 support: <strong>Gold</strong> ($175 / hour, ad-hoc support), <strong>Platinum</strong> ($700 / month, ongoing partnership), and <strong>Diamond</strong> ($1,200 / month, in-person + virtual in Dallas / Collin County). Every engagement starts with a free 15-minute Strategy Call. The self-paced Primary Trail course is in development and will open with founding-member pricing for waitlist members.</p>
+          <h3>How much does dad-focused family court coaching cost at The Primary Trail?</h3>
+          <p>Three tiers of 1:1 support are offered. <strong>Gold</strong> is $175 per hour for ad-hoc consultation. <strong>Platinum</strong> is $700 per month for an ongoing weekly partnership. <strong>Diamond</strong> is $1,200 per month for in-person plus virtual full-service support in Dallas and Collin County. Every engagement starts with a free 15-minute strategy call.</p>
         </div>
       </div>
     </div>

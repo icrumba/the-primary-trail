@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Notes | The Primary Trail</title>
+  <meta name="description" content="Field notes from The Primary Trail: practical guidance for dads new to family court — capture, organize, reflect, execute.">
+  <meta name="theme-color" content="#1F3F2E">
+  <link rel="canonical" href="https://theprimarytrail.com/blog/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Field Notes | The Primary Trail">
+  <meta property="og:description" content="Practical guidance for dads new to family court.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theprimarytrail.com/blog/">
+  <meta property="og:site_name" content="The Primary Trail">
+  <meta property="og:image" content="https://theprimarytrail.com/assets/images/vic-hako-1200.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/logo/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Shared design tokens — mirror of index.html base. Subset only. */
+    :root {
+      --tpt-green: #1F3F2E;
+      --tpt-green-dark: #142B1F;
+      --tpt-amber: #C97B27;
+      --tpt-cream: #F5EFE3;
+      --tpt-charcoal: #1F1F1F;
+      --tpt-warm-gray: #5C5A53;
+      --tpt-warm-white: #FBF8F1;
+      --tpt-line: #DCD3BE;
+      --font-serif: "Lora", Georgia, serif;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --max-w: 1080px;
+      --content-w: 720px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--tpt-charcoal);
+      background: var(--tpt-cream);
+      line-height: 1.65;
+      font-size: 19px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--tpt-green); text-decoration: none; }
+    a:hover { color: var(--tpt-amber); }
+    h1, h2, h3 { font-family: var(--font-serif); color: var(--tpt-green); font-weight: 600; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 300; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 400; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; }
+    .narrow { max-width: var(--content-w); margin: 0 auto; }
+    .eyebrow {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    nav.top {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--tpt-line);
+      background: var(--tpt-cream);
+    }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; }
+    .brand-mark { display: flex; align-items: center; }
+    .brand-logo { display: block; height: 110px; width: auto; }
+
+    section.blog-hero {
+      padding: 4rem 0 3rem;
+      background: var(--tpt-cream);
+    }
+    section.blog-hero h1 { margin-bottom: 1rem; max-width: 22ch; }
+    section.blog-hero .lead {
+      font-size: 1.2rem;
+      color: var(--tpt-warm-gray);
+      max-width: 50ch;
+      font-weight: 300;
+    }
+
+    section.posts { padding: 3rem 0 6rem; }
+    .post-list { max-width: var(--content-w); margin: 0 auto; }
+    .post-entry {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--tpt-line);
+    }
+    .post-entry h2 { margin-bottom: 0.75rem; }
+    .post-entry h2 a { color: var(--tpt-green); }
+    .post-entry h2 a:hover { color: var(--tpt-amber); }
+    .post-meta {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--tpt-warm-gray);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.75rem;
+    }
+    .post-excerpt { color: var(--tpt-warm-gray); max-width: 60ch; }
+
+    footer {
+      padding: 3rem 0 2rem;
+      background: var(--tpt-green-dark);
+      color: var(--tpt-cream);
+    }
+    footer .disclaimer {
+      font-size: 0.85rem;
+      max-width: 70ch;
+      margin: 0 auto;
+      color: rgba(245, 239, 227, 0.85);
+      line-height: 1.6;
+    }
+    footer .tiny {
+      font-size: 0.78rem;
+      text-align: center;
+      margin-top: 1rem;
+      color: rgba(245, 239, 227, 0.6);
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .brand-logo { height: 70px; }
+      section.blog-hero { padding: 3rem 0 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a class="brand-mark" href="/" aria-label="The Primary Trail home">
+        <img src="/assets/logo/logo.png" alt="The Primary Trail" class="brand-logo" width="600" height="337">
+      </a>
+    </div>
+  </nav>
+
+  <section class="blog-hero">
+    <div class="container">
+      <div class="narrow">
+        <span class="eyebrow">FIELD NOTES</span>
+        <h1>Practical guidance from the trail.</h1>
+        <p class="lead">Short reads for dads new to family court. Capture, organize, reflect, execute &mdash; written from lived experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="posts">
+    <div class="container">
+      <div class="post-list">
+
+        <article class="post-entry">
+          <p class="post-meta">May 18, 2026 &middot; By Hakan Oksuzler &amp; Victor Cuevas</p>
+          <h2><a href="/blog/how-dads-prepare-for-first-family-court-hearing-texas/">How a dad should prepare for the first family court hearing in Texas</a></h2>
+          <p class="post-excerpt">What happens, what to bring, what to say (and not say), and how the four-pillar framework applies before you ever walk in.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="disclaimer">The Primary Trail provides coaching and educational services only. We are not lawyers and do not provide legal advice. Information shared is for educational purposes and is not a substitute for the advice of a licensed attorney in your jurisdiction. Outcomes vary; we make no guarantees about case results.</p>
+      <p class="tiny">&copy; 2026 The Primary Trail. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
