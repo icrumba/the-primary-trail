@@ -385,7 +385,8 @@
       background: var(--tpt-warm-white);
       border-radius: 8px;
       padding: 1.5rem 1.25rem;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 8px 24px rgba(31, 63, 46, 0.10);
+      border: 1px solid var(--tpt-line);
     }
     .waitlist-embed iframe {
       width: 100%;
@@ -591,21 +592,22 @@
       font-size: 0.97rem;
     }
 
-    /* CTA BAND */
+    /* CTA BAND — blends with surrounding cream sections; the form card carries
+       the visual weight instead of a dark band. */
     section.cta-band {
       padding: 4rem 0;
-      background: var(--tpt-navy);
-      color: var(--tpt-cream);
+      background: var(--tpt-cream);
+      color: var(--tpt-charcoal);
       text-align: center;
     }
-    section.cta-band h2 { color: var(--tpt-cream); margin-bottom: 1rem; }
-    section.cta-band p { color: var(--tpt-amber-light); margin-bottom: 2rem; max-width: 40ch; margin-left: auto; margin-right: auto; }
+    section.cta-band h2 { margin-bottom: 1rem; }
+    section.cta-band p { color: var(--tpt-warm-gray); margin-bottom: 2rem; max-width: 40ch; margin-left: auto; margin-right: auto; }
     section.cta-band .waitlist {
       margin: 0 auto;
       justify-content: center;
     }
     section.cta-band .waitlist input[type="email"] { background: var(--tpt-warm-white); }
-    section.cta-band .tiny { color: var(--tpt-amber-light); }
+    section.cta-band .tiny { color: var(--tpt-warm-gray); }
 
     /* FOOTER */
     footer {
