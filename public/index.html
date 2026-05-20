@@ -46,8 +46,8 @@
         "description": "Coaching and education for dads new to family court. The Primary Trail teaches a four-pillar framework — capture, organize, reflect, execute — to show up prepared, save thousands in legal fees, and stay aligned with the children's best interest.",
         "foundingDate": "2026",
         "founder": [
-          { "@type": "Person", "name": "Victor Cuevas", "jobTitle": "Co-Founder" },
-          { "@type": "Person", "name": "Hakan Oksuzler", "jobTitle": "Co-Founder" }
+          { "@id": "https://theprimarytrail.com/#person-victor" },
+          { "@id": "https://theprimarytrail.com/#person-hako" }
         ],
         "parentOrganization": {
           "@type": "Organization",
@@ -91,42 +91,8 @@
   }
   </script>
 
-  <!-- JSON-LD: Person — Hakan Oksuzler (E-E-A-T) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Hakan Oksuzler",
-    "alternateName": "Hako Oksuzler",
-    "jobTitle": "Co-Founder, The Primary Trail",
-    "worksFor": { "@id": "https://theprimarytrail.com/#organization" },
-    "knowsAbout": [
-      "family court preparation",
-      "custody case documentation",
-      "high-conflict co-parenting",
-      "mediation preparation",
-      "parenting facilitator preparation"
-    ],
-    "sameAs": ["[HAKO_LINKEDIN_URL]"]
-  }
-  </script>
-
-  <!-- JSON-LD: Person — Victor Cuevas (E-E-A-T) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Victor Cuevas",
-    "jobTitle": "Co-Founder, The Primary Trail",
-    "worksFor": { "@id": "https://theprimarytrail.com/#organization" },
-    "knowsAbout": [
-      "family court preparation for fathers",
-      "case documentation discipline",
-      "communication strategy under pressure"
-    ],
-    "sameAs": ["[VICTOR_LINKEDIN_URL]"]
-  }
-  </script>
+  <!-- JSON-LD: Person schemas (Hakan, Victor) live on /about where the founders
+       are the main subject. Organization references them here via @id. -->
 
   <!-- JSON-LD: WebSite -->
   <script type="application/ld+json">
@@ -281,6 +247,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1.5rem;
     }
     nav a {
       transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -294,6 +261,21 @@
       height: 160px;
       width: auto;
       max-width: 360px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-link {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--tpt-green);
+      letter-spacing: 0.02em;
+    }
+    .nav-link:hover {
+      color: var(--tpt-amber);
     }
 
     /* HERO */
@@ -661,93 +643,7 @@
       letter-spacing: 0.02em;
     }
 
-    /* WHO WE ARE */
-    section.who-we-are {
-      padding: 5rem 0;
-      background: var(--tpt-cream);
-      border-top: 1px solid var(--tpt-line);
-    }
-    .who-we-are .grid {
-      display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    @media (max-width: 800px) {
-      .who-we-are .grid { grid-template-columns: 1fr; gap: 2rem; }
-    }
-    .who-we-are .text { max-width: 50ch; }
-    .who-we-are img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-    }
-    .who-we-are p.upl-line {
-      font-size: 0.95rem;
-      color: var(--tpt-warm-gray);
-      font-style: italic;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--tpt-line);
-    }
-
-    /* FOUNDER BIOS — added for E-E-A-T per GEO/AEO sprint */
-    .who-we-are .bios {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 2rem;
-      max-width: 1100px;
-      margin: 3rem auto 0;
-      padding-top: 3rem;
-      border-top: 1px solid var(--tpt-line);
-    }
-    @media (max-width: 800px) {
-      .who-we-are .bios { grid-template-columns: 1fr; }
-    }
-    .bio-card {
-      background: var(--tpt-warm-white);
-      padding: 2rem 1.75rem;
-      border: 1px solid var(--tpt-line);
-      border-radius: 8px;
-    }
-    .bio-card h3 {
-      margin-bottom: 0.25rem;
-      color: var(--tpt-green);
-      font-size: 1.3rem;
-    }
-    .bio-role {
-      font-family: var(--font-sans);
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--tpt-amber);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-    }
-    .bio-card p {
-      font-size: 0.95rem;
-      color: var(--tpt-charcoal);
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-    .bio-social {
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--tpt-line);
-    }
-    .bio-social a {
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      color: var(--tpt-green);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .bio-social a:hover { color: var(--tpt-amber); }
-
-    /* Hero caption — muted line under the hero CTA pair. */
+/* Hero caption — muted line under the hero CTA pair. */
     .hero-caption {
       font-size: 0.85rem;
       color: var(--tpt-warm-gray);
@@ -886,6 +782,9 @@
       <a class="brand-mark" href="/" aria-label="The Primary Trail home">
         <img src="/assets/logo/logo.png" alt="The Primary Trail" class="brand-logo" width="600" height="337">
       </a>
+      <div class="nav-links">
+        <a href="/about" class="nav-link">About</a>
+      </div>
     </div>
   </nav>
 
@@ -905,53 +804,6 @@
           <a href="#waitlist-cta" class="btn-primary" data-cta="hero-primary-waitlist">Register your interest</a>
         </div>
         <p class="tiny hero-caption">Founding-member access and pricing when we open.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO WE ARE -->
-  <section class="who-we-are">
-    <div class="container">
-      <div class="grid">
-        <div class="image">
-          <img
-            src="/assets/images/vic-hako-1200.jpg"
-            srcset="/assets/images/vic-hako-800.jpg 800w, /assets/images/vic-hako-1200.jpg 1200w, /assets/images/vic-hako-1600.jpg 1600w"
-            sizes="(max-width: 800px) 100vw, 50vw"
-            alt="Victor Cuevas and Hakan Oksuzler, co-founders of The Primary Trail"
-            width="1200" height="796"
-            loading="lazy">
-        </div>
-        <div class="text">
-          <span class="eyebrow">WHO WE ARE</span>
-          <h2>Two dads. Two cases. <span class="heading-accent">One framework.</span></h2>
-          <p>We're ordinary dads who walked through extraordinary moments in the family court system. We learned what to capture, what to organize, what to wait on, and what to say and not say. We built it into a framework — the one we use with the dads we work with now.</p>
-          <p class="upl-line">We are not attorneys and do not provide legal advice. We provide preparation, coaching, and practical real-world guidance rooted in lived experience.</p>
-        </div>
-      </div>
-
-      <!-- FOUNDER BIOS — E-E-A-T signals per GEO/AEO sprint.
-           TODO: Victor + Hako to confirm LinkedIn URLs to replace the placeholders. -->
-      <div class="bios">
-        <article class="bio-card" id="bio-hako">
-          <h3>Hakan &ldquo;Hako&rdquo; Oksuzler</h3>
-          <p class="bio-role">Co-Founder, The Primary Trail</p>
-          <p>Hakan (&ldquo;Hako&rdquo;) is a lifelong DFW resident, a devoted father, and a financial services executive with more than two decades of leadership experience. He brings the analytical, strategic discipline of a financial operator to one of the hardest things a dad can face: a contested custody case.</p>
-          <p>Hako has been his son&rsquo;s primary custodian since the boy was three. The case that established that custody was one of the most fiercely contested in Collin County, ultimately reaching both the Fifth Circuit Court of Appeals and the Texas Supreme Court. Hako describes that decade as <em>&ldquo;Hell and back.&rdquo;</em></p>
-          <p>In ten-plus years inside the family court system, Hako developed a quiet reputation for what he does best: identifying and removing the barriers, distractions, and unnecessary conflict that weigh on children behind the scenes in high-conflict co-parenting. He now works with other fathers facing similar terrain, offering the focused preparation, perspective, and tested approach he wishes he&rsquo;d had on day one.</p>
-          <p>Outside the case work, Hako is married to Tara, recently retired from 14 seasons of volunteer youth soccer coaching, and is &mdash; by his own admission &mdash; an amateur barbecue pitmaster of questionable patience. His mission is simple: no father should feel alone, voiceless, or powerless in the work of staying present for his children.</p>
-          <p class="bio-social"><a href="[HAKO_LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn &rarr;</a></p>
-        </article>
-
-        <article class="bio-card" id="bio-victor">
-          <h3>Victor Cuevas</h3>
-          <p class="bio-role">Co-Founder, The Primary Trail</p>
-          <p>Victor is a Gen X operator, a Texas father of four, and the co-founder of The Knowledge Jar &mdash; the family of brands that includes Texas Power Search and now The Primary Trail. He brings a builder&rsquo;s discipline to every venture: research first, identity docs second, roadmap third, MVP, ship, iterate.</p>
-          <p>He&rsquo;s also a dad who has lived inside a contested, high-conflict custody case for years. The kind of case that involves court orders, third-party professionals, child-welfare interactions, and the documentation discipline that turns out to matter at every step. He carries the habits that case taught him &mdash; the daily-record practice, the communication caution, the calm-under-pressure cadence &mdash; into every framework The Primary Trail teaches.</p>
-          <p>The Primary Trail exists because Victor saw two things in his own case that lawyers don&rsquo;t always say plainly to dads new to the system. First, the dads who show up prepared keep more of their savings, their sanity, and their relationships with their children than the ones who don&rsquo;t. Second, Texas family court assumes you already know how to navigate it &mdash; and almost no dad does on day one.</p>
-          <p>Outside the case, Victor coaches his kids in sports, leads in his church community, and treats every project under The Knowledge Jar umbrella as a chance to build something his children will be proud of someday.</p>
-          <p class="bio-social"><a href="[VICTOR_LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn &rarr;</a></p>
-        </article>
       </div>
     </div>
   </section>
