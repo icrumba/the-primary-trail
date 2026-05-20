@@ -183,7 +183,7 @@
     /* Scroll-margin so anchor targets land with breathing room above the H2,
        not flush with the viewport top. Used by #waitlist-cta and #framework. */
     :target { scroll-margin-top: 24px; }
-    #waitlist-cta, #framework, #faq, #sources, #coming-soon { scroll-margin-top: 24px; }
+    #waitlist-cta, #framework, #faq, #coming-soon { scroll-margin-top: 24px; }
     body {
       font-family: var(--font-sans);
       color: var(--tpt-charcoal);
@@ -431,19 +431,16 @@
     .stat-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
+      gap: 1.75rem;
+      max-width: 1200px;
       margin: 2rem auto 0;
     }
-    /* 6 cards now: 3x2 desktop, 2x3 tablet, 1x6 mobile */
-    @media (max-width: 1023px) and (min-width: 600px) {
-      .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 599px) {
+    /* 3 cards: 3-up desktop+tablet, 1-up phone. */
+    @media (max-width: 767px) {
       .stat-grid { grid-template-columns: 1fr; }
     }
     .stat-card {
-      padding: 2rem 1.75rem;
+      padding: 2.5rem 2rem;
       background: var(--tpt-warm-white);
       border: 1px solid var(--tpt-line);
       border-radius: 8px;
@@ -508,36 +505,6 @@
       }
     }
 
-    /* SAVINGS PULL-QUOTE */
-    section.savings {
-      padding: 4rem 0;
-      background: var(--tpt-cream-warm);
-      color: var(--tpt-charcoal);
-      text-align: center;
-    }
-    .savings-quote {
-      max-width: 32ch;
-      margin: 0 auto;
-    }
-    .savings-quote p {
-      font-family: var(--font-serif);
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      margin: 0 0 0.75rem;
-      line-height: 1.3;
-      color: var(--tpt-green);
-    }
-    .savings-attribution {
-      display: block;
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      font-style: normal;
-      color: var(--tpt-warm-gray);
-      letter-spacing: 0.05em;
-    }
-
-    /* OFFERINGS */
-    section.offerings { padding: 5rem 0 3rem; }
-    section.offerings h2 { margin-bottom: 2.5rem; }
     /* WHO */
     section.who { padding: 5rem 0; background: var(--tpt-cream-warm); }
     section.who p {
@@ -653,38 +620,6 @@
     }
 
 
-    /* Educational CTA band — low-stakes path between stats and savings/tiers. */
-    section.framework-band {
-      padding: 2.5rem 0;
-      background: var(--tpt-cream-warm);
-      border-top: 1px solid var(--tpt-line);
-      border-bottom: 1px solid var(--tpt-line);
-    }
-    .framework-band .container {
-      text-align: center;
-    }
-    .framework-band p {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      color: var(--tpt-green);
-      max-width: 720px;
-      margin: 0 auto 0.75rem;
-      font-style: italic;
-      line-height: 1.45;
-    }
-    .framework-band .framework-link {
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      color: var(--tpt-green);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
-    .framework-band .framework-link:hover {
-      color: var(--tpt-amber);
-    }
-
     /* Coming-soon band — bridge between stats / who-this-is-for and FAQ.
        Calm palette, centered, no prices. Primary action: register interest. */
     section.coming-soon-band {
@@ -711,67 +646,6 @@
       display: inline-block;
     }
 
-    /* Sources & methodology section — quiet citation list above footer.
-       Visited by AI crawlers and serious readers; deliberately understated. */
-    section.sources {
-      padding: 5rem 0 4rem;
-      background: var(--tpt-cream);
-      border-top: 1px solid var(--tpt-line);
-    }
-    section.sources .eyebrow { color: var(--tpt-warm-gray); }
-    section.sources h2 {
-      margin-bottom: 0.75rem;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-    }
-    .sources-intro {
-      color: var(--tpt-warm-gray);
-      margin-bottom: 2.5rem;
-      font-size: 1rem;
-    }
-    .sources-list dt {
-      font-family: var(--font-sans);
-      font-weight: 600;
-      color: var(--tpt-green);
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .sources-list dt:first-child { margin-top: 0; }
-    .sources-list dd {
-      font-size: 0.9rem;
-      color: var(--tpt-warm-gray);
-      line-height: 1.65;
-      margin: 0 0 0.5rem 0;
-    }
-    .sources-link-placeholder {
-      display: inline-block;
-      font-style: italic;
-      color: var(--tpt-amber);
-      font-size: 0.82rem;
-      margin-top: 0.25rem;
-    }
-
-    /* 988 support resource line — small, muted, centered. Sits inside the
-       dark stats section directly below the grid so it pairs with stat 6. */
-    .support-resource {
-      max-width: 60ch;
-      margin: 2.5rem auto 0;
-      padding: 0 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: rgba(251, 248, 241, 0.78);
-      line-height: 1.55;
-    }
-    .support-resource a {
-      color: var(--tpt-warm-white);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      font-weight: 500;
-    }
-    .support-resource a:hover {
-      color: var(--tpt-amber);
-    }
   </style>
 </head>
 <body>
@@ -829,26 +703,12 @@
         <p>The cost of being unprepared lands on you, your kids, and your wallet.</p>
       </div>
       <div class="stat-grid">
-        <div class="stat-card" id="stat-primary-custody">
-          <span class="stat-number">1 in 5</span>
-          <span class="stat-label">Primary custody</span>
-          <h3>Of custodial parents are fathers.</h3>
-          <p>Roughly 20% of custodial parents are fathers. Texas mirrors the national average. Dads receive about 33% of parenting time &mdash; 120 days a year versus 245 for moms.</p>
-          <cite class="stat-source">U.S. Census Bureau via Mims Ballew Hollingsworth Texas Law (2026); CustodyXchange State Data</cite>
-        </div>
         <div class="stat-card" id="stat-monthly-days">
           <span class="stat-number">6&ndash;8 days</span>
           <span class="stat-label">Per month</span>
           <h3>With their kids during the school year.</h3>
           <p>Under Texas Standard or Expanded Possession, most non-custodial dads get just 6 to 8 days per month during the school year, plus a 30-day summer block and alternating holidays. The reality is closer to one in four days, not one in two.</p>
           <cite class="stat-source">Texas Family Code &sect; 153.252 (Standard Possession Order); &sect; 153.254 (Expanded SPO)</cite>
-        </div>
-        <div class="stat-card" id="stat-income-loss">
-          <span class="stat-number">Up to 40%</span>
-          <span class="stat-label">Income loss</span>
-          <h3>For men in their 30s the year after divorce.</h3>
-          <p>Men in their 30s lose close to 40% of their income in the year after divorce, versus 9% for women. Across all ages, dads' household income drops 23&ndash;25% post-divorce.</p>
-          <cite class="stat-source">Federal Reserve Bank of St. Louis (2024); U.S. GAO</cite>
         </div>
         <div class="stat-card" id="stat-hearing-cost">
           <span class="stat-number">$5K&ndash;$25K</span>
@@ -864,38 +724,7 @@
           <p>Family law attorneys bill in 15-minute increments at $300&ndash;$500 per hour. A one-word "yes" to an email costs $75 to $125. Dads who bring their lawyer a packet &mdash; not a pile &mdash; save thousands.</p>
           <cite class="stat-source">Clio Legal Trends Report; ABA fee surveys</cite>
         </div>
-        <div class="stat-card" id="stat-mental-health">
-          <span class="stat-number">Nearly 3x</span>
-          <span class="stat-label">Mental health</span>
-          <h3>Greater odds of dying by suicide for divorced men.</h3>
-          <p>Divorced men have 2.82x greater odds of dying by suicide than married men. For separated men under 34, the odds are eight times higher. Knowledge, preparation, and community change outcomes.</p>
-          <cite class="stat-source">Psychological Bulletin (2025 meta-analysis, 106M+ men); Orygen Research</cite>
-        </div>
       </div>
-
-      <!-- 988 support resource — paired with stat 6 (mental health) per duty-of-care pattern. -->
-      <aside role="complementary" class="support-resource" data-resource="988-lifeline">
-        If you or a dad you know is struggling, you are not alone. The 988 Suicide and Crisis Lifeline is free and confidential, 24/7. <a href="https://988lifeline.org" target="_blank" rel="noopener">Call or text 988</a>.
-      </aside>
-    </div>
-  </section>
-
-  <!-- EDUCATIONAL CTA BAND — low-stakes "research mode" path between stats (heavy) and the savings quote.
-       Third path in the funnel: not-ready-to-talk dads get a reading destination instead of a button. -->
-  <section class="framework-band">
-    <div class="container">
-      <p>Not ready to talk to anyone yet? Read the framework. Capture, Organize, Reflect, Execute &mdash; the four pillars dads use to stand prepared.</p>
-      <a href="#framework" class="framework-link" data-cta="framework-band-link">Read the framework &rarr;</a>
-    </div>
-  </section>
-
-  <!-- SAVINGS PULL-QUOTE -->
-  <section class="savings">
-    <div class="container">
-      <blockquote class="savings-quote">
-        <p>Stand prepared. Stay calm. Keep more of your money for your kids.</p>
-        <cite class="savings-attribution">THE PRIMARY TRAIL PROMISE</cite>
-      </blockquote>
     </div>
   </section>
 
@@ -980,66 +809,6 @@
             data-form-id="KHUqZ6bBPmihIiP9j9vS"
             title="Register your interest in The Primary Trail"></iframe>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOURCES & METHODOLOGY — citations for the 6 stat cards.
-       TODO (Victor): replace each [paste exact URL] placeholder with the canonical
-       source URL before public launch. -->
-  <section id="sources" class="sources">
-    <div class="container">
-      <div class="narrow">
-        <span class="eyebrow">SOURCES &amp; METHODOLOGY</span>
-        <h2>Where the numbers come from.</h2>
-        <p class="sources-intro">Each stat above is sourced. If you want to verify the underlying research before sharing the page or quoting a figure, the citations are below.</p>
-
-        <dl class="sources-list">
-          <dt>Primary custody (1 in 5)</dt>
-          <dd>
-            U.S. Census Bureau (Custodial Mothers and Fathers reports).<br>
-            Mims Ballew Hollingsworth Texas Law summary (2026).<br>
-            CustodyXchange State Data.<br>
-            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
-          </dd>
-
-          <dt>Days per month (6&ndash;8)</dt>
-          <dd>
-            Texas Family Code &sect; 153.252 (Standard Possession Order).<br>
-            Texas Family Code &sect; 153.254 (Expanded SPO).<br>
-            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
-          </dd>
-
-          <dt>Income loss (Up to 40%)</dt>
-          <dd>
-            Federal Reserve Bank of St. Louis (Feb 2024).<br>
-            U.S. Government Accountability Office post-divorce income study.<br>
-            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
-          </dd>
-
-          <dt>Per routine hearing ($5K&ndash;$25K)</dt>
-          <dd>
-            Texas family law firm fee disclosures.<br>
-            ABA fee surveys.<br>
-            Clio Legal Trends Report.<br>
-            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
-          </dd>
-
-          <dt>One-word reply ($75&ndash;$125)</dt>
-          <dd>
-            Clio Legal Trends Report.<br>
-            ABA fee surveys.<br>
-            Texas State Bar fee survey.<br>
-            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
-          </dd>
-
-          <dt>Mental health (Nearly 3x)</dt>
-          <dd>
-            <em>Psychological Bulletin</em>, 2025 meta-analysis of 106 million men across 75 studies.<br>
-            Orygen Research / Michael Wilson study (2025).<br>
-            <span class="sources-link-placeholder">[Victor: paste exact URLs]</span>
-          </dd>
-        </dl>
       </div>
     </div>
   </section>
