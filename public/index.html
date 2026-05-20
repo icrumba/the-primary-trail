@@ -377,14 +377,19 @@
       color: var(--tpt-warm-white);
     }
 
-    /* GHL waitlist form embed */
+    /* GHL waitlist form embed — light card so the form's default dark text
+       reads against the dark-navy CTA band. */
     .waitlist-embed {
       max-width: 480px;
-      margin: 0 0 1rem;
+      margin: 0 auto 1rem;
+      background: var(--tpt-warm-white);
+      border-radius: 8px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     }
     .waitlist-embed iframe {
       width: 100%;
-      min-height: 220px;
+      min-height: 320px;
       border: none;
       background: transparent;
       display: block;
@@ -1119,8 +1124,7 @@
             data-height="auto"
             data-layout-iframe-id="inline-KHUqZ6bBPmihIiP9j9vS-cta"
             data-form-id="KHUqZ6bBPmihIiP9j9vS"
-            title="Register your interest in The Primary Trail"
-            loading="lazy"></iframe>
+            title="Register your interest in The Primary Trail"></iframe>
         </div>
       </div>
     </div>
